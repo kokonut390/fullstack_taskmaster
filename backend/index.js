@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 app.get('/final', async (req, res) => {
     try {
         const final = await Final.find();
-        res.json(memes);
+        res.json(final);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
