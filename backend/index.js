@@ -46,7 +46,7 @@ app.post('/final', async (req, res) => {
     const { id, name, blank, source } = req.body;
     try {
         const newFinal = new Final({ id, name, blank, source });
-        await newMeme.save();
+        await newFinal.save();
         res.status(201).json(newMeme);
     } catch (err) {
         console.error(err);
