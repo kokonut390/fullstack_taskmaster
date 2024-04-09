@@ -20,33 +20,33 @@ db.once('open', () => {
 });
 
 // Meme Schema
-const finalSchema = new mongoose.Schema({
+const memeSchema = new mongoose.Schema({
     id: String,
     name: String,
     blank: String,
     source: String
 });
 
-const Final = mongoose.model('Meme', memeSchema);
+const Meme = mongoose.model('Meme', memeSchema);
 
 app.use(bodyParser.json());
 
 // Routes
-app.get('/final', async (req, res) => {
+app.get('/memes', async (req, res) => {
     try {
-        const final = await Final.find();
-        res.json(final);
+        const memes = await Meme.find();
+        res.json(memes);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
     }
 });
 
-app.post('/final', async (req, res) => {
+app.post('/memes', async (req, res) => {
     const { id, name, blank, source } = req.body;
     try {
-        const newFinal = new Final({ id, name, blank, source });
-        await newFinal.save();
+        const newMeme = new Meme({ id, name, blank, source });
+        await newMeme.save();
         res.status(201).json(newMeme);
     } catch (err) {
         console.error(err);
