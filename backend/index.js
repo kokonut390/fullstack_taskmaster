@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 // Routes
 app.get('/final', async (req, res) => {
     try {
-        const memes = await Final.find();
+        const final = await Final.find();
         res.json(memes);
     } catch (err) {
         console.error(err);
