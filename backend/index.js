@@ -27,7 +27,7 @@ const finalSchema = new mongoose.Schema({
     source: String
 });
 
-const Meme = mongoose.model('Meme', memeSchema);
+const Final = mongoose.model('Meme', memeSchema);
 
 app.use(bodyParser.json());
 
