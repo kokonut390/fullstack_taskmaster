@@ -45,7 +45,7 @@ app.get('/final', async (req, res) => {
 app.post('/final', async (req, res) => {
     const { id, name, blank, source } = req.body;
     try {
-        const newMeme = new Meme({ id, name, blank, source });
+        const newMeme = new Final({ id, name, blank, source });
         await newMeme.save();
         res.status(201).json(newMeme);
     } catch (err) {
