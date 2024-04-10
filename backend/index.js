@@ -40,7 +40,7 @@ app.get('/schedule', async (req, res) => {
 app.post('/schedule', async (req, res) => {
     const { id, name, date } = req.body;
     try {
-        const newSchedule = new Meme({ id, name, blank, source });
+        const newSchedule = new Schedule({ id, name, blank, source });
         await newMeme.save();
         res.status(201).json(newMeme);
     } catch (err) {
