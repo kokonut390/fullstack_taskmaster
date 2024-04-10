@@ -7,7 +7,7 @@ function App() {
         fetch('http://localhost:3001/schedule')
             .then(response => response.json())
             .then(data => setSchedules(data))
-            .catch(error => console.error('There is an error!'))
+            .catch(error => console.error('There is an error!', error))
     })
   return (
     <>
