@@ -22,7 +22,7 @@ function App() {
                   <li key = {schedule.id}>{schedule.name} - {schedule.date}</li>
               ))}
           </ul>
-      </div>
+        </div>
     )
 }
 
