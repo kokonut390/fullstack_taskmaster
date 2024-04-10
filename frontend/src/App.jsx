@@ -5,7 +5,7 @@ function App() {
 
     useEffect(()=> {
         fetch('http://localhost:3001/schedule')
-            .then()
+            .then(re)
     })
   return (
     <>
