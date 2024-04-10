@@ -13,7 +13,7 @@ function App() {
       <div>
           <h1>Schedule</h1>
           <ul>
-              {schedules.map()}
+              {schedules.map(schedule => )}
           </ul>
       </div>
   )
