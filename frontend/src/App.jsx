@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [schedules, setSchedules] = useState(0)
+  const [schedules, setSchedules] = useState([])
 
-  return (
+  return (  
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
