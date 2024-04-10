@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 app.get('/schedule', async (req, res) => {
     try {
         console.log("schedules")
-        const schedules = await Schedule.find({});
+        const schedules = await Schedule.find();
         res.json(schedules);
     } catch (err) {
         console.error(err);
