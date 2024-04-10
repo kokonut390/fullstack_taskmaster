@@ -18,8 +18,9 @@ function App() {
             name: newTaskName,
             date: newTaskDate
         }
-
     }
+
+    
     return (
         <div>
           <h1>Schedule</h1>
