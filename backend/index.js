@@ -33,7 +33,7 @@ app.use(bodyParser.json());
 // Routes
 app.get('/schedule', async (req, res) => {
     try {
-        console.log(schedules)
+        console.log("schedules")
         const schedules = await Schedule.find({});
         res.json(schedules);
     } catch (err) {
