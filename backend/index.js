@@ -38,7 +38,7 @@ app.get('/schedule', async (req, res) => {
 });
 
 app.post('/schedule', async (req, res) => {
-    const { id, name, blank, source } = req.body;
+    const { id, name, date } = req.body;
     try {
         const newMeme = new Meme({ id, name, blank, source });
         await newMeme.save();
