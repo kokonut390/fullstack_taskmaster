@@ -34,9 +34,9 @@ app.use(bodyParser.json());
 // Routes
 app.get('/schedule', async (req, res) => {
     try {
-        const schedule = await Schedule.find();
-        console.log(schedule)
-        res.json(schedule);
+        const schedules = await Schedule.find();
+        console.log(schedules)
+        res.json(schedules);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
