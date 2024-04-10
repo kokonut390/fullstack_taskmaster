@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 function App() {
     const [schedules, setSchedules] = useState([])
-    const [newTaskName, setnewTaskName]
+    const [newTaskName, setnewTaskName] = useState()
 
 
     useEffect(()=> {
