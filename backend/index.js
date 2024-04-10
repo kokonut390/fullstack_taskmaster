@@ -38,14 +38,11 @@ app.get('/schedule', async (req, res) => {
 });
 
 app.post('/schedule', async (req, res) => {
+    const { id, name, date } = req.body;
     try {
-        const newSchedule = new Schedule({
-            name: req.body.name,
-            date: req.body.date
-        });
-
-        const savedSchedule = await newSchedule.save();
-        res.status(201).json(savedSchedule);
+        const newSchedule = new Schedule({ id, name, date });
+        await newSchedule.save();
+        res.status(201).json(newSchedule);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
