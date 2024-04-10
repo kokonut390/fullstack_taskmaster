@@ -13,12 +13,6 @@ mongoose.connect(url)
     .then(()=>{console.log("Connected to MongoDB")})
     .catch((error)=>{console.log(error.message)});
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => {
-    console.log('Connected to MongoDB');
-});
-
 // Meme Schema
 const scheduleSchema = new mongoose.Schema({
     id: String,
