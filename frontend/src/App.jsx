@@ -11,7 +11,7 @@ function App() {
             .then(response => response.json())
             .then(data => setSchedules(data))
             .catch(error => console.error('There is an error!', error))
-    })
+    }, [])
   return (
       <div>
           <h1>Schedule</h1>
