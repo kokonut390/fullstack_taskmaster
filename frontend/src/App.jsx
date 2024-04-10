@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [schedules, setSchedules] = useState([])
+    
 
     useEffect(()=> {
         fetch('http://localhost:3001/schedule')
