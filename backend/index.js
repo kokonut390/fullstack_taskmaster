@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 // Routes
 app.get('/schedule', async (req, res) => {
     try {
-        const schedule = await Meme.find();
+        const schedule = await Schedule.find();
         res.json(schedule);
     } catch (err) {
         console.error(err);
