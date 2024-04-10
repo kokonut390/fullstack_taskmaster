@@ -27,7 +27,7 @@ const scheduleSchema = new mongoose.Schema({
     source: String
 });
 
-const Meme = mongoose.model('Meme', memeSchema);
+const Meme = mongoose.model('Meme', scheduleSchema);
 
 app.use(bodyParser.json());
 
