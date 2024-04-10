@@ -18,7 +18,7 @@ function App() {
             name: newTaskName,
             date: newTaskDate
         }
-        
+        fetch()
     }
 
 
