@@ -46,7 +46,7 @@ app.post('/schedule', async (req, res) => {
     const { id, name, blank, source } = req.body;
     try {
         const newSchedule = new Schedule({ id, name, blank, source });
-        await newMeme.save();
+        await newSchedule.save();
         res.status(201).json(newMeme);
     } catch (err) {
         console.error(err);
