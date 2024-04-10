@@ -6,7 +6,7 @@ function App() {
     useEffect(()=> {
         fetch('http://localhost:3001/schedule')
             .then(response => response.json())
-            .then()
+            .then(data =)
             .catch()
     })
   return (
