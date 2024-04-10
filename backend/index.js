@@ -23,8 +23,7 @@ db.once('open', () => {
 const scheduleSchema = new mongoose.Schema({
     id: String,
     name: String,
-    date: String,
-    
+    date: String
 });
 
 const Schedule = mongoose.model('Schedule', scheduleSchema);
