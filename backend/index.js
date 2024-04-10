@@ -11,7 +11,7 @@ const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/sche
 
 mongoose.connect(url)
     .then(()=>{console.log("connect to mongodb")})
-    .catch((=>{}));
+    .catch(()=>{});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
