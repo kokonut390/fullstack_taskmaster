@@ -19,7 +19,7 @@ function App() {
             date: newTaskDate
         }
         fetch('http://localhost:3001/schedule'.{
-            
+
         })
     }
 
