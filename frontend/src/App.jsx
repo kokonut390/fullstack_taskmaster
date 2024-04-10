@@ -15,7 +15,7 @@ function App() {
 
     const addTask = () => {
         const newTask = {
-            
+            name
         }
 
     }
