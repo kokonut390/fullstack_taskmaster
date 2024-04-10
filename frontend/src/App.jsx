@@ -13,7 +13,10 @@ function App() {
             .catch(error => console.error('There is an error!', error))
     }, [])
 
-    const addTask = 
+    const addTask = () => {
+
+        
+    }
     return (
         <div>
           <h1>Schedule</h1>
