@@ -37,6 +37,17 @@ app.get('/schedule', async (req, res) => {
     }
 });
 
+app.post('/memes', async (req, res) => {
+    const { id, name, blank, source } = req.body;
+    try {
+        const newMeme = new Meme({ id, name, blank, source });
+        await newMeme.save();
+        res.status(201).json(newMeme);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
