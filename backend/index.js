@@ -27,7 +27,7 @@ const scheduleSchema = new mongoose.Schema({
     source: String
 });
 
-const Schedule = mongoose.model('Schedule', scheduleSchema, 'schedule_list');
+const Schedule = mongoose.model('Schedule', scheduleSchema, 'schedule');
 
 app.use(bodyParser.json());
 
