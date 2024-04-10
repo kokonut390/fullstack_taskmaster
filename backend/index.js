@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 app.get('/schedule', async (req, res) => {
     try {
         const schedule = await Schedule.find();
-        res.json(memes);
+        res.json(schedule);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
