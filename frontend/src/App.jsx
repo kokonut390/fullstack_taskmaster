@@ -12,6 +12,7 @@ function App() {
   return (
       <div>
           <h1>Schedule</h1>
+          <
       </div>
   )
 }
