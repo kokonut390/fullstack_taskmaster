@@ -24,7 +24,7 @@ const scheduleSchema = new mongoose.Schema({
     id: String,
     name: String,
     date: String,
-    source: String
+    
 });
 
 const Schedule = mongoose.model('Schedule', scheduleSchema);
