@@ -14,7 +14,7 @@ function App() {
     }, [])
 
     const addTask = () => {
-        const 
+        const newTask
 
     }
     return (
