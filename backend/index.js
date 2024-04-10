@@ -32,7 +32,7 @@ const Schedule = mongoose.model('Schedule', scheduleSchema);
 app.use(bodyParser.json());
 
 // Routes
-app.get('/memes', async (req, res) => {
+app.get('/schedule', async (req, res) => {
     try {
         const memes = await Meme.find();
         res.json(memes);
