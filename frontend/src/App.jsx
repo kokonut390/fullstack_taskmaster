@@ -4,7 +4,7 @@ function App() {
   const [schedules, setSchedules] = useState([])
 
     useEffect(()=> {
-        
+        fetch()
     })
   return (
     <>
