@@ -20,14 +20,14 @@ db.once('open', () => {
 });
 
 // Meme Schema
-const schduleSchema = new mongoose.Schema({
+const scheduleSchema = new mongoose.Schema({
     id: String,
     name: String,
     blank: String,
     source: String
 });
 
-const Schdule = mongoose.model('Schedule', schduleSchema);
+const Schedule = mongoose.model('Schedule', schduleSchema);
 
 app.use(bodyParser.json());
 
