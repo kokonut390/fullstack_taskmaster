@@ -20,40 +20,39 @@ db.once('open', () => {
 });
 
 // Meme Schema
-const scheduleSchema = new mongoose.Schema({
+const memeSchema = new mongoose.Schema({
     id: String,
     name: String,
     blank: String,
     source: String
 });
 
-const Schedule = mongoose.model('Schedule', scheduleSchema);
+const Meme = mongoose.model('Meme', memeSchema);
 
 app.use(bodyParser.json());
 
 // Routes
-app.get('/schedule', async (req, res) => {
+app.get('/memes', async (req, res) => {
     try {
-        const schedule = await Schedule.find();
-        res.json(schedule);
+        const memes = await Meme.find();
+        res.json(memes);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
     }
 });
 
-app.post('/schedule', async (req, res) => {
+app.post('/memes', async (req, res) => {
     const { id, name, blank, source } = req.body;
     try {
-        const newSchedule = new Schedule({ id, name, blank, source });
-        await newSchedule.save();
-        res.status(201).json(newSchedule);
+        const newMeme = new Meme({ id, name, blank, source });
+        await newMeme.save();
+        res.status(201).json(newMeme);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error' });
     }
 });
-
 
 
 app.listen(PORT, () => {
