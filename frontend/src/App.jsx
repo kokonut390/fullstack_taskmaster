@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 function App() {
   const [schedules, setSchedules] = useState([])
 
-    useEffect()
+    useEffect(()=> {
+        
+    })
   return (
     <>
       <div>
