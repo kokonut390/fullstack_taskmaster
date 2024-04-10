@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [schedules] = useState(0)
+  const [schedules, setSchedules] = useState(0)
 
   return (
     <>
