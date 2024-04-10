@@ -20,7 +20,7 @@ db.once('open', () => {
 });
 
 // Meme Schema
-const memeSchema = new mongoose.Schema({
+const schduleSchema = new mongoose.Schema({
     id: String,
     name: String,
     blank: String,
