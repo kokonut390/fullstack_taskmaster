@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 function App() {
   const [schedules, setSchedules] = useState([])
 
-  return (  
+    useEffect()
+  return (
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
