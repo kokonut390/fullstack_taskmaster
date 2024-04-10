@@ -9,7 +9,7 @@ const password = process.argv[2]
 
 const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/schedule?retryWrites=true&w=majority&appName=Cluster0`
 
-mongoose.connect(url).then(()=);
+mongoose.connect(url).then(()=>);
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
