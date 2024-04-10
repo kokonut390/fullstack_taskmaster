@@ -32,7 +32,7 @@ const Meme = mongoose.model('Meme', memeSchema);
 app.use(bodyParser.json());
 
 // Routes
-app.get('/memes', async (req, res) => {
+app.get('/schedule', async (req, res) => {
     try {
         const memes = await Meme.find();
         res.json(memes);
