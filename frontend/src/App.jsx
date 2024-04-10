@@ -4,7 +4,8 @@ function App() {
   const [schedules, setSchedules] = useState([])
 
     useEffect(()=> {
-        fetch()
+        fetch('http://localhost:3001/schedule')
+            .then()
     })
   return (
     <>
