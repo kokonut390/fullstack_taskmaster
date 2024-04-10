@@ -5,7 +5,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const PORT = 3001;
-
+const cors = require('cors');
+app.use(cors());
 const password = process.argv[2]
 
 const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/schedule?retryWrites=true&w=majority&appName=Cluster0`
