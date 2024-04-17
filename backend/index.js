@@ -54,7 +54,7 @@ app.put('/schedule', async (req, res) => {
         const updatedSchedule = await Schedule.findOneAndUpdate(
             {id: id},
             {name, date},
-            
+            new
         )
     }
 })
