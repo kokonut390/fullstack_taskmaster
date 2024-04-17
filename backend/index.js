@@ -58,7 +58,9 @@ app.put('/schedule', async (req, res) => {
         )
         if (updatedSchedule){
             res.json(updatedSchedule)
-        }else 
+        }else {
+            res.status()
+        }
     }
 })
 
