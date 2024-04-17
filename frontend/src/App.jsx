@@ -50,7 +50,7 @@ function App() {
             />
             <input
                 type="date"
-                
+                value={}
             />
         </div>
     )
