@@ -23,7 +23,7 @@ function App() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON
+            body: JSON.stringify()
         })
     }
 
