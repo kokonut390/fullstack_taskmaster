@@ -45,7 +45,6 @@ function App() {
                 })
                 .catch(error => console.error('Error deleting the task', error))
         }
-
     }
 
 
