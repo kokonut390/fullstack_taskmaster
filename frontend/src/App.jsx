@@ -49,7 +49,7 @@ function App() {
                 placeholder="Enter task name"
             />
             <input
-                
+                type={}
             />
         </div>
     )
