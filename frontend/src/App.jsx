@@ -25,6 +25,7 @@ function App() {
             },
             body: JSON.stringify(newTask)
         })
+            .then()
     }
 
 
