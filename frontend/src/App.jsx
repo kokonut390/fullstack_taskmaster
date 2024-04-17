@@ -35,7 +35,9 @@ function App() {
     }
 
     const deleteTask = (id) => {
-        fetch('https://final-liangyu.onrender.com/schedule'
+        fetch('https://final-liangyu.onrender.com/schedule', {
+            method
+        }
     }
 
 
