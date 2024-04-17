@@ -51,7 +51,7 @@ function App() {
             <input
                 type="date"
                 value={newTaskDate}
-                onChange={}
+                onChange={(e) => setNewTaskDate(e.target.value)}
             />
         </div>
     )
