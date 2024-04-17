@@ -12,7 +12,7 @@ function App() {
             document.body.classList.add('dark-mode')
             document.body.classList.remove('light-mode')
         }else {
-            document.body.classList.add('')
+            document.body.classList.add('light')
         }
     })
 
