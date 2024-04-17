@@ -47,7 +47,7 @@ function App() {
                 value={newTaskName}
                 onChange={(e) => setNewTaskName(e.target.value)}
                 placeholder="Enter task name"
-                >
+            />
         </div>
     )
 }
