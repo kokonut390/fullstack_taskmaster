@@ -42,6 +42,7 @@ function App() {
             .then(() => {
                 setSchedules(schedules.filter(schedule => schedule.id !== id))
             })
+            .catch()
     }
 
 
