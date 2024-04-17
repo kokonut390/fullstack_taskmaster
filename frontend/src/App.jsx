@@ -35,7 +35,7 @@ function App() {
     }
 
     const deleteTask = (id) => {
-        if (window.confirm())
+        if (window.confirm("Are you sure you want to delete"))
         fetch('https://final-liangyu.onrender.com/schedule', {
             method: 'DELETE'
         })
