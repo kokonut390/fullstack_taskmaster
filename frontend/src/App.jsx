@@ -9,7 +9,8 @@ function App() {
 
     useEffect(() => {
         if(isDarkMode){
-            document.body.classList.add()
+            document.body.classList.add('dark-mode')
+            document.body
         }
     })
 
