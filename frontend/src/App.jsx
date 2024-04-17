@@ -49,7 +49,8 @@ function App() {
                 placeholder="Enter task name"
             />
             <input
-                type={}
+                type="date"
+                
             />
         </div>
     )
