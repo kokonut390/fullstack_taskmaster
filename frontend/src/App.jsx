@@ -53,6 +53,7 @@ function App() {
               {schedules.map(schedule => (
                   <li key = {schedule.id}>
                       {schedule.name} - {schedule.date}
+                      
                   </li>
               ))}
           </ul>
