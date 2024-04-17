@@ -49,7 +49,7 @@ app.post('/schedule', async (req, res) => {
 });
 
 app.put('/schedule', async (req, res) => {
-    const {id, name, date}
+    const {id, name, date} =
 })
 
 
