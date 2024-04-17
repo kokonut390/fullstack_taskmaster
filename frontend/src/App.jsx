@@ -45,7 +45,7 @@ function App() {
           </ul>
             <input 
                 value={newTaskName}
-                onChange={}
+                onChange={(e)}
         </div>
     )
 }
