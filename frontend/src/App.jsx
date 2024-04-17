@@ -8,7 +8,9 @@ function App() {
     const [isDarkMode, setIsDarkMode] = useState(false)
 
     useEffect(() => {
-        
+        if(isDarkMode){
+            
+        }
     })
 
 
