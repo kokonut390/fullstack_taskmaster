@@ -9,7 +9,7 @@ function App() {
 
     useEffect(() => {
         if(isDarkMode){
-            document.body.classList
+            document.body.classList.add()
         }
     })
 
