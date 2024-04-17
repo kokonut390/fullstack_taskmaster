@@ -53,7 +53,7 @@ function App() {
               {schedules.map(schedule => (
                   <li key = {schedule.id}>
                       {schedule.name} - {schedule.date}
-                      <button onClick={()}
+                      <button onClick={() => deleteTask()}
                   </li>
               ))}
           </ul>
