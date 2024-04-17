@@ -34,6 +34,8 @@ function App() {
             .catch(error => console.error('There is an error', error))
     }
 
+    const deleteTask
+
 
     return (
         <div>
