@@ -38,7 +38,10 @@ function App() {
         fetch('https://final-liangyu.onrender.com/schedule', {
             method: 'DELETE'
         })
-            .then()
+            .then(response => response.json())
+            .then(() => {
+                setSchedules(schedules.filter)
+            })
     }
 
 
