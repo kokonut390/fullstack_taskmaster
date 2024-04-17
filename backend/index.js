@@ -62,7 +62,7 @@ app.put('/schedule', async (req, res) => {
             res.status(404).json({message: 'Schedule not found'})
         }
     }catch (err){
-        
+        console.log()
     }
 })
 
