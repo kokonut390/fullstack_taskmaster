@@ -59,7 +59,7 @@ app.put('/schedule', async (req, res) => {
         if (updatedSchedule){
             res.json(updatedSchedule)
         }else {
-            res.status(404).json({message})
+            res.status(404).json({message: 'Schedule not found'})
         }
     }
 })
