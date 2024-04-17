@@ -70,7 +70,9 @@ app.put('/schedule', async (req, res) => {
 app.delete('/schedule', async (req, res) => {
     try {
         const result = await Schedule.deleteOne({id: req.params.id})
-        if(result.deletedCount)
+        if(result.deletedCount === 0){
+            
+        }
     }
 })
 
