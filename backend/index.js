@@ -56,6 +56,7 @@ app.put('/schedule', async (req, res) => {
             {name, date},
             {new: true}
         )
+        if (())
     }
 })
 
