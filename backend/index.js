@@ -72,8 +72,6 @@ app.delete('/schedule', async (req, res) => {
         const result = await Schedule.deleteOne({id: req.params.id})
         if(result.deletedCount === 0){
             return res.status(404).json({message: 'Schedule not found'})
-        }else {
-            
         }
     }
 })
