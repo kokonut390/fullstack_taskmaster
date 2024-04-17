@@ -48,7 +48,7 @@ app.post('/schedule', async (req, res) => {
     }
 });
 
-app.put('/schedule')
+app.put('/schedule', async )
 
 
 const PORT = process.env.PORT || 3001
