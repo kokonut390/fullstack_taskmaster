@@ -36,16 +36,16 @@ function App() {
 
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this schedule?")){
-            
-        }
-        fetch('https://final-liangyu.onrender.com/schedule', {
-            method: 'DELETE'
-        })
-            .then(response => response.json())
-            .then(() => {
-                setSchedules(schedules.filter(schedule => schedule.id !== id))
+            fetch('https://final-liangyu.onrender.com/schedule', {
+                method: 'DELETE'
             })
-            .catch(error => console.error('Error deleting the task', error))
+                .then(response => response.json())
+                .then(() => {
+                    setSchedules(schedules.filter(schedule => schedule.id !== id))
+                })
+                .catch(error => console.error('Error deleting the task', error))
+        }
+
     }
 
 
