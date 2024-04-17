@@ -62,7 +62,7 @@ function App() {
 
     return (
         <div>
-            <button style={{position: 'absolute', top: 10, }}
+            <button style={{position: 'absolute', top: 10, right: 10}}
           <h1>Schedule</h1>
           <ul>
               {schedules.map(schedule => (
