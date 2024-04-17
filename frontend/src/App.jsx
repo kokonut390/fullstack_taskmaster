@@ -25,7 +25,7 @@ function App() {
             },
             body: JSON.stringify(newTask)
         })
-            .then()
+            .then(response => )
     }
 
 
