@@ -51,7 +51,9 @@ function App() {
           <h1>Schedule</h1>
           <ul>
               {schedules.map(schedule => (
-                  <li key = {schedule.id}>{schedule.name} - {schedule.date}</li>
+                  <li key = {schedule.id}>
+                      {schedule.name} - {schedule.date}
+                  </li>
               ))}
           </ul>
             <input 
