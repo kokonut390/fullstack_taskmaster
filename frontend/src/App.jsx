@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import './index.css'
 
 function App() {
     const [schedules, setSchedules] = useState([])
