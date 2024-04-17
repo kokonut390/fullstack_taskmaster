@@ -7,7 +7,9 @@ function App() {
     const [newTaskDate, setNewTaskDate] = useState('')
     const [isDarkMode, setIsDarkMode] = useState(false)
 
-    useEffect()
+    useEffect(() => {
+        
+    })
 
 
     useEffect(()=> {
