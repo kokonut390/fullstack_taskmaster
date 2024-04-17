@@ -28,6 +28,7 @@ function App() {
             .then(response => response.json())
             .then(data => {
                 setSchedules([...schedules, data])
+                setNewTaskDate()
             })
     }
 
