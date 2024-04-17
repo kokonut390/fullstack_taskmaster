@@ -5,7 +5,7 @@ function App() {
     const [schedules, setSchedules] = useState([])
     const [newTaskName, setNewTaskName] = useState('')
     const [newTaskDate, setNewTaskDate] = useState('')
-    const [isDarkMode, setIsDarkMode] = useState()
+    const [isDarkMode, setIsDarkMode] = useState(false)
 
 
     useEffect(()=> {
