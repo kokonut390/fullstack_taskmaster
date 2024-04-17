@@ -19,7 +19,7 @@ function App() {
             date: newTaskDate
         }
         fetch('https://final-liangyu.onrender.com/schedule', {
-            method: 'POST'
+            method: 'POST',
             headers: {
                 
             }
