@@ -21,7 +21,7 @@ function App() {
         fetch('https://final-liangyu.onrender.com/schedule', {
             method: 'POST',
             headers: {
-                'Content-Type': ''
+                'Content-Type': 'app'
             }
         })
     }
