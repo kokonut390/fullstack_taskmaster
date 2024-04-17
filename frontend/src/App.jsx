@@ -50,7 +50,8 @@ function App() {
             />
             <input
                 type="date"
-                value={}
+                value={newTaskDate}
+                
             />
         </div>
     )
