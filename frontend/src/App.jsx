@@ -42,7 +42,7 @@ function App() {
             .then(() => {
                 setSchedules(schedules.filter(schedule => schedule.id !== id))
             })
-            .catch(error => console.error())
+            .catch(error => console.error('Error deleting the task', error))
     }
 
 
