@@ -53,7 +53,7 @@ function App() {
                 value={newTaskDate}
                 onChange={(e) => setNewTaskDate(e.target.value)}
             />
-            <button onClick={addTask}
+            <button onClick={addTask}>Add task</button>
         </div>
     )
 }
