@@ -40,7 +40,7 @@ function App() {
         })
             .then(response => response.json())
             .then(() => {
-                setSchedules(schedules.filter)
+                setSchedules(schedules.filter(schedule => ))
             })
     }
 
