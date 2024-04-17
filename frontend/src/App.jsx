@@ -11,6 +11,8 @@ function App() {
         if(isDarkMode){
             document.body.classList.add('dark-mode')
             document.body.classList.remove('light-mode')
+        }else {
+            document.body.classList.add('')
         }
     })
 
