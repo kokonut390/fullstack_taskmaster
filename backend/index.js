@@ -74,6 +74,9 @@ app.delete('/schedule', async (req, res) => {
             return res.status(404).json({message: 'Schedule not found'})
         }
         res.status(200).json({message: 'Schedule deleted'})
+    }catch (err){
+        console.error(err)
+        res.status(500).json({message:})
     }
 })
 
