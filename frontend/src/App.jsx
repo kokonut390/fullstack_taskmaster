@@ -10,7 +10,7 @@ function App() {
     useEffect(() => {
         if(isDarkMode){
             document.body.classList.add('dark-mode')
-            document.body
+            document.body.classList.remove('')
         }
     })
 
