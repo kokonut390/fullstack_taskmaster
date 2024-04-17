@@ -43,7 +43,6 @@ function App() {
                   <li key = {schedule.id}>{schedule.name} - {schedule.date}</li>
               ))}
           </ul>
-            <input >
         </div>
     )
 }
