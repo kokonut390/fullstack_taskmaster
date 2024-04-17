@@ -67,6 +67,8 @@ app.put('/schedule', async (req, res) => {
     }
 })
 
+app.delete('/schedule')
+
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
