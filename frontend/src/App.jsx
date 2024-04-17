@@ -44,7 +44,7 @@ function App() {
               ))}
           </ul>
             <input 
-                value={}
+                value={newTaskName}
         </div>
     )
 }
