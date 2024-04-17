@@ -44,6 +44,7 @@ function App() {
               ))}
           </ul>
             <input 
+                value={}
         </div>
     )
 }
