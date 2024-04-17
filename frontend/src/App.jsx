@@ -31,7 +31,7 @@ function App() {
                 setNewTaskName('')
                 setNewTaskDate('')
             })
-            .catch()
+            .catch(error => )
     }
 
 
