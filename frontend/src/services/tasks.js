@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = '/api/schedule'
+const baseUrl = '/schedule'
 
 const getAllSchedules = async () => {
     const request = await axios.get(baseUrl)
