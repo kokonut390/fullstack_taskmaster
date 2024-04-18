@@ -26,6 +26,8 @@ function App() {
             .catch(error => console.error('There is an error!', error))
     }, [])
 
+
+ */
     const addTask = () => {
         const newTask = {
             name: newTaskName,
