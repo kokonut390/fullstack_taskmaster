@@ -13,7 +13,7 @@ function ScheduleForm() {
             const response = await axios.post(baseUrl, { name, date });
             console.log('Schedule added/updated:', response.data);
             // Clear form
-            props.
+            props.addSchedule(response.data)
             setName('');
             setDate('');
         } catch (error) {
