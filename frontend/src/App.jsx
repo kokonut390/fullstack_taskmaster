@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './index.css'
 import ScheduleList from './services/ScheduleList.js'
-import 
+import ScheduleForm from './services/ScheduleForm.js'
 
 function App() {
     const [schedules, setSchedules] = useState([])
