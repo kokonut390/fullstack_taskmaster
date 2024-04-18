@@ -24,6 +24,8 @@ function ScheduleList() {
                 setSchedules(schedules.filter(schedule => schedule.id !== id))
                 console.log('Schedule deleted', response.data)
             }
+        }catch (error){
+            
         }
     }
 
