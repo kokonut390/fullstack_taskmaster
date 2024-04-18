@@ -19,19 +19,18 @@ function App() {
 
 
     useEffect(()=> {
-        fetch('/schedule')
+        fetch('https://final-liangyu.onrender.com/schedule')
             .then(response => response.json())
             .then(data => setSchedules(data))
             .catch(error => console.error('There is an error!', error))
     }, [])
-
 
     const addTask = () => {
         const newTask = {
             name: newTaskName,
             date: newTaskDate
         }
-        fetch('/schedule', {
+        fetch('https://final-liangyu.onrender.com/schedule', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,7 +48,7 @@ function App() {
 
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this schedule?")){
-            fetch('/schedule', {
+            fetch('https://final-liangyu.onrender.com/schedule', {
                 method: 'DELETE'
             })
                 .then(response => response.json())
