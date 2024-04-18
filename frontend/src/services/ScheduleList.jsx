@@ -3,7 +3,7 @@ import axios from 'axios';
 const baseUrl = `http://localhost:3001/schedule`
 
 function ScheduleList({ schedules, fetchSchedules}) {
-    const handleDelete
+    const handleDelete = 
     return (
         <div>
             <h2>Schedules</h2>
