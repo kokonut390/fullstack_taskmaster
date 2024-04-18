@@ -5,7 +5,7 @@ const baseUrl = `http://localhost:3001/schedule`
 function ScheduleList({ schedules, fetchSchedules}) {
     const handleDelete = async (_id) => {
         try {
-            const response = await axios.delete()
+            const response = await axios.delete(`${baseUrl}/${_id}`)
         }
     }
     return (
