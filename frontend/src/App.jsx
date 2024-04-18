@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.css'
 
-
 function App() {
     const [schedules, setSchedules] = useState([])
     const [newTaskName, setNewTaskName] = useState('')
@@ -22,10 +21,7 @@ function App() {
     useEffect(()=> {
         fetch('https://final-liangyu.onrender.com/schedule')
             .then(response => response.json())
-            .then(data => {
-                console.log(data)
-                setSchedules(data)
-            })
+            .then(data => setSchedules(data))
             .catch(error => console.error('There is an error!', error))
     }, [])
 
@@ -70,15 +66,15 @@ function App() {
                     onClick={() => setIsDarkMode(!isDarkMode)}>
                 Dark Mode
             </button>
-          <h1>Schedule</h1>
-          <ul>
-              {schedules.map(schedule => (
-                  <li key = {schedule.id}>
-                      {schedule.name} - {schedule.date}
-                      <button onClick={() => deleteTask(schedule.id)}>Delete</button>
-                  </li>
-              ))}
-          </ul>
+            <h1>Schedule</h1>
+            <ul>
+                {schedules.map(schedule => (
+                    <li key = {schedule.id}>
+                        {schedule.name} - {schedule.date}
+                        <button onClick={() => deleteTask(schedule.id)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
             <input
                 value={newTaskName}
                 onChange={(e) => setNewTaskName(e.target.value)}
