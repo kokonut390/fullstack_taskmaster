@@ -1,0 +1,46 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+
+function ScheduleForm() {
+    const [id, setId] = useState('');
+    const [name, setName] = useState('');
+    const [date, setDate] = useState('');
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:3001/schedule', { id, name, date });
+            console.log('Schedule added/updated:', response.data);
+            // Clear form
+            setId('');
+            setName('');
+            setDate('');
+        } catch (error) {
+            console.error('Error adding/updating schedule:', error);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <h2>Add/Update Schedule</h2>
+            <input
+                value={id}
+                onChange={e => setId(e.target.value)}
+                placeholder="ID"
+            />
+            <input
+                value={name}
+                onChange={e => setName(e.target.value)}
+                placeholder="Name"
+            />
+            <input
+                value={date}
+                onChange={e => setDate(e.target.value)}
+                placeholder="Date"
+            />
+            <button type="submit">Submit</button>
+        </form>
+    );
+}
+
+export default ScheduleForm;
