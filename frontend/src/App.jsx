@@ -30,7 +30,7 @@ function App() {
             name: newTaskName,
             date: newTaskDate
         }
-        fetch(`https://final-liangyu.onrender.com/schedule/${id}`, {
+        fetch(`https://final-liangyu.onrender.com/schedule`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
