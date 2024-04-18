@@ -11,6 +11,7 @@ function ScheduleList() {
     const fetchSchedules = async () => {
         try {
             const response = await axios.get('http://localhost:3001/schedule');
+            console.log("Fetched schedules:", response.data)
             setSchedules(response.data);
         } catch (error) {
             console.error('Error fetching data: ', error);
