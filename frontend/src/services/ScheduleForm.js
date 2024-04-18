@@ -24,16 +24,19 @@ function ScheduleForm() {
         <form onSubmit={handleSubmit}>
             <h2>Add/Update Schedule</h2>
             <input
+                type="text"
                 value={id}
                 onChange={e => setId(e.target.value)}
                 placeholder="ID"
             />
             <input
+                type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
                 placeholder="Name"
             />
             <input
+                type="text"
                 value={date}
                 onChange={e => setDate(e.target.value)}
                 placeholder="Date"
