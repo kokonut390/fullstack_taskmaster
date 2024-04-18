@@ -16,7 +16,7 @@ function ScheduleList() {
             setSchedules(response.data);
         } catch (error) {
             console.error('Error fetching data: ', error);
-        }
+        } 
     };
 
     const deleteSchedule = async (id) => {
