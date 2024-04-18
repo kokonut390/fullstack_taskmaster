@@ -20,7 +20,7 @@ function ScheduleForm(props) {
             props.fetchSchedules()
         } catch (error) {
             if (error.response && error.response.status === 400){
-                setError(error.)
+                setError(error.response.)
             }
             console.error('Error adding/updating schedule:', error);
         }
