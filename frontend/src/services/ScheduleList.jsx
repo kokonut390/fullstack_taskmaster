@@ -37,7 +37,7 @@ function ScheduleList() {
             <ul>
                 {schedules.map((schedule, index) => (
                     <li key={index}>{schedule.name} - {schedule.date}
-                        <button onClick={() => deleteSchedule(schedule.id)}
+                        <button onClick={() => deleteSchedule(schedule.id)}>Delete</button>
                     </li>
                 ))}
             </ul>
