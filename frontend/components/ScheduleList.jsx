@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import scheduleService from "../services/task.js";
 
-const ScheduleList = ({Id}) => {
+const ScheduleList = ({scheduleId}) => {
     const [schedules, setSchedules] = useState([]);
 
     useEffect(() => {
