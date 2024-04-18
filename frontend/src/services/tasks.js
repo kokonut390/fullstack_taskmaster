@@ -1,20 +1,23 @@
 import axios from 'axios'
+const baseUrl = '/api/schedule'
 
-const baseUrl = '/schedule'
-
-const getAll = () => {
-    const request = axios.get(baseUrl)
-    return request.then(response => response.data)
+const getAllSchedules = async () => {
+    const request = await axios.get(baseUrl)
+    return request.data
 }
 
-const create = newObject => {
-    const request = axios.post(baseUrl, newObject)
-    return request.then(response => response.data)
+const createSchedules = async (newObject) => {
+    const request = await axios.post(baseUrl, newObject)
+    return request.data
 }
 
-const update = (id, newObject) => {
-    const request = axios.put(`${baseUrl}/${id}`, newObject)
-    return request.then(response => response.data)
+const updateSchedules = async (id, newObject) => {
+    const request = await axios.put(`${baseUrl}/${id}`, newObject)
+    return request.data
 }
 
-export default { getAll, create, update }
+const deleteSchedules = async (id) => {
+    const request = await axios.delete(`${baseUrl}/${id}`);
+    return request.data
+}
+export default { getAllSchedules, createSchedules, updateSchedules, deleteSchedules}
