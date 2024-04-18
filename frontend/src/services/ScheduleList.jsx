@@ -24,7 +24,7 @@ function ScheduleList() {
         try {
             const response = await axios.delete(`http://localhost:3001/schedule/${_id}`)
             if(response.status === 200){
-                setSchedules(schedules.filter(schedule => schedule.id !== id))
+                setSchedules(schedules.filter(schedule => schedule._id !== _id))
                 console.log('Schedule deleted', response.data)
             }
         }catch (error){
