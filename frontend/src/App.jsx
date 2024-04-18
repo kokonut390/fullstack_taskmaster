@@ -37,7 +37,7 @@ function App() {
             name: newTaskName,
             date: newTaskDate
         }
-        tasks.create(newTask)
+        taskService.create(newTask)
             .then(data => {
                 setSchedules([...schedules, data]);
                 setNewTaskName('');
