@@ -6,6 +6,8 @@ const Home = () => {
 
 
     useEffect(() => {
-        const fetchSchedules = async 
+        const fetchSchedules = async () => {
+            
+        }
     }, []);
 }
