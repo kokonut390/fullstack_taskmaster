@@ -40,7 +40,7 @@ app.get('/schedule', async (req, res) => {
 app.post('/schedule', async (req, res) => {
     const { name, date } = req.body;
     try {
-        const newSchedule = new Schedule({ id, name, date });
+        const newSchedule = new Schedule({ name, date });
         await newSchedule.save();
         res.status(201).json(newSchedule);
     } catch (err) {
