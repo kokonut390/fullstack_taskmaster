@@ -24,7 +24,7 @@ function App() {
         <div>
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
-            <ScheduleList schedules={schedules}/>
+            <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
         </div>
     );
 }
