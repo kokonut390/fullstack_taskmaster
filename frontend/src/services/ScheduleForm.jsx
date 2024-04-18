@@ -43,7 +43,7 @@ function ScheduleForm(props) {
                 placeholder="Date"
             />
             <button type="submit">Submit</button>
-            {error && <p className="error"></p> }
+            {error && <p className="error">{error}</p> }
         </form>
     );
 }
