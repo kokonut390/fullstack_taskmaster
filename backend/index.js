@@ -41,7 +41,7 @@
         try {
             const existingSchedule = await Schedule.findOne({name})
             if(existingSchedule){
-                return res.status(400).json({message:''})
+                return res.status(400).json({message:'A schedule with the same name already exists.'})
             }
             const newSchedule = new Schedule({ name, date });
             await newSchedule.save();
