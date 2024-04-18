@@ -19,7 +19,7 @@ function ScheduleList() {
 
     const deleteSchedule = async (id) => {
         try {
-            const response =
+            const response = await 
         }
     }
 
