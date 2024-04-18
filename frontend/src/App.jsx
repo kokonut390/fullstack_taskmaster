@@ -3,7 +3,7 @@ import ScheduleList from './services/ScheduleList.jsx'
 import ScheduleForm from './services/ScheduleForm.jsx'
 
 function App() {
-    const onst [schedules, setSchedules] = useState([]);
+    const [schedules, setSchedules] = useState([]);
 
     const fetchSchedules = async () => {
         try {
