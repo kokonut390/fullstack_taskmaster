@@ -1,98 +1,98 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require("body-parser");
+    const express = require('express');
+    const mongoose = require('mongoose');
+    const bodyParser = require("body-parser");
 
 
-const app = express();
-const cors = require('cors');
-app.use(express.static('dist'))
-app.use(cors());
-const password = process.argv[2]
+    const app = express();
+    const cors = require('cors');
+    app.use(express.static('dist'))
+    app.use(cors());
+    const password = process.argv[2]
 
-const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/schedule?retryWrites=true&w=majority&appName=Cluster0`
+    const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/schedule?retryWrites=true&w=majority&appName=Cluster0`
 
-mongoose.connect(url)
-    .then(()=>{console.log("Connected to MongoDB")})
-    .catch((error)=>{console.log(error.message)});
+    mongoose.connect(url)
+        .then(()=>{console.log("Connected to MongoDB")})
+        .catch((error)=>{console.log(error.message)});
 
-// Meme Schema
-const scheduleSchema = new mongoose.Schema({
-    name: String,
-    date: String
-});
+    // Meme Schema
+    const scheduleSchema = new mongoose.Schema({
+        name: String,
+        date: String
+    });
 
-const Schedule = mongoose.model('Schedule', scheduleSchema);
+    const Schedule = mongoose.model('Schedule', scheduleSchema);
 
-app.use(express.json());
+    app.use(express.json());
 
-// Routes
-app.get('/schedule', async (req, res) => {
-    try {
-        const schedules = await Schedule.find({});
-        res.json(schedules);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Server error' });
-    }
-});
-
-app.post('/schedule', async (req, res) => {
-    const { name, date } = req.body;
-    try {
-        const newSchedule = new Schedule({ name, date });
-        await newSchedule.save();
-        res.status(201).json(newSchedule);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Server error' });
-    }
-});
-
-app.put('/schedule', async (req, res) => {
-    const {name, date} =req.body
-    try{
-        const updatedSchedule = await Schedule.findOneAndUpdate(
-            {name, date},
-            {new: true}
-        )
-        if (updatedSchedule){
-            res.json(updatedSchedule)
-        }else {
-            res.status(404).json({message: 'Schedule not found'})
+    // Routes
+    app.get('/schedule', async (req, res) => {
+        try {
+            const schedules = await Schedule.find({});
+            res.json(schedules);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Server error' });
         }
-    }catch (err){
-        console.error(err)
-        res.status(500).json({message: 'Server error'})
-    }
-})
+    });
 
-const ObjectId = mongoose.Types.ObjectId;
-
-app.delete('/schedule/:_id', async (req, res) => {
-    const _id = req.params._id
-    console.log("Attempting to delete schedule with _id:", _id)
-    try {
-        // Ensure the ID is a valid ObjectId before attempting deletion
-        if (!ObjectId.isValid(req.params.id)) {
-            return res.status(400).json({ message: 'Invalid ID format' });
+    app.post('/schedule', async (req, res) => {
+        const { name, date } = req.body;
+        try {
+            const newSchedule = new Schedule({ name, date });
+            await newSchedule.save();
+            res.status(201).json(newSchedule);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Server error' });
         }
+    });
 
-        const result = await Schedule.deleteOne({ _id: new ObjectId(req.params.id) });
-
-        if (result.deletedCount === 0) {
-            return res.status(404).json({ message: 'Schedule not found' });
+    app.put('/schedule', async (req, res) => {
+        const {name, date} =req.body
+        try{
+            const updatedSchedule = await Schedule.findOneAndUpdate(
+                {name, date},
+                {new: true}
+            )
+            if (updatedSchedule){
+                res.json(updatedSchedule)
+            }else {
+                res.status(404).json({message: 'Schedule not found'})
+            }
+        }catch (err){
+            console.error(err)
+            res.status(500).json({message: 'Server error'})
         }
+    })
 
-        res.status(200).json({ message: 'Schedule deleted' });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Server error' });
-    }
-});
+    const ObjectId = mongoose.Types.ObjectId;
+
+    app.delete('/schedule/:_id', async (req, res) => {
+        const _id = req.params._id
+        console.log("Attempting to delete schedule with _id:", _id)
+        try {
+            // Ensure the ID is a valid ObjectId before attempting deletion
+            if (!ObjectId.isValid(req.params.id)) {
+                return res.status(400).json({ message: 'Invalid ID format' });
+            }
+
+            const result = await Schedule.deleteOne({ _id: new ObjectId(req.params.id) });
+
+            if (result.deletedCount === 0) {
+                return res.status(404).json({ message: 'Schedule not found' });
+            }
+
+            res.status(200).json({ message: 'Schedule deleted' });
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Server error' });
+        }
+    });
 
 
 
-const PORT = process.env.PORT || 3001
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+    const PORT = process.env.PORT || 3001
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
