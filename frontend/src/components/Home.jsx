@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import scheduleService from '../services/tasks.js'
 
 const Home = () => {
-    const [schedules, setSchedules] = useState()
+    const [schedules, setSchedules] = useState([])
 
 
     useEffect(() => {
