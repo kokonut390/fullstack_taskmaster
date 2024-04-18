@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.css'
-import 
+import ScheduleList from 
 
 function App() {
     const [schedules, setSchedules] = useState([])
