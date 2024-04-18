@@ -22,7 +22,9 @@ function App() {
     useEffect(()=> {
         fetch('https://final-liangyu.onrender.com/schedule')
             .then(response => response.json())
-            .then(data => setSchedules(data))
+            .then(data => {
+                setSchedules(data)
+            })
             .catch(error => console.error('There is an error!', error))
     }, [])
 
