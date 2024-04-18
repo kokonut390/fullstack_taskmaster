@@ -48,7 +48,7 @@ function App() {
 
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this schedule?")){
-            fetch(`https://final-liangyu.onrender.com/schedule/${id}`, {
+            fetch(`/schedule/${id}`, {
                 method: 'DELETE'
             })
                 .then(response => response.json())
