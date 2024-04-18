@@ -10,13 +10,8 @@ function ScheduleList() {
     }, []);
 
     const fetchSchedules = async () => {
-        try {
-            const response = await axios.get(baseUrl);
-            console.log("Fetched schedules:", response.data)
-            setSchedules(response.data);
-        } catch (error) {
-            console.error('Error fetching data: ', error);
-        }
+        const request = await axios.get(baseUrl)
+        return request.data
     };
 
     const deleteSchedule = async (id) => {
