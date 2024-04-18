@@ -23,7 +23,7 @@ function App() {
     return (
         <div>
             <h1>Schedule Manager</h1>
-            <ScheduleForm fetche/>
+            <ScheduleForm fetchSchedules={}/>
             <ScheduleList />
         </div>
     );
