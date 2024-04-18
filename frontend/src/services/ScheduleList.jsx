@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 const baseUrl = `http://localhost:3001/schedule`
 
-function ScheduleList({ schedules, fetch}) {
+function ScheduleList({ schedules, fetchSchedules}) {
+    
     return (
         <div>
             <h2>Schedules</h2>
