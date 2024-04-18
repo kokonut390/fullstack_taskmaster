@@ -45,7 +45,7 @@ function App() {
             })
             .catch(error => console.error('There is an error', error));
     }
-
+/*
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this schedule?")){
             fetch('https://final-liangyu.onrender.com/schedule', {
@@ -58,7 +58,7 @@ function App() {
                 .catch(error => console.error('Error deleting the task', error))
         }
     }
-
+*/
 
     return (
         <div>
