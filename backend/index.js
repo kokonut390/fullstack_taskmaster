@@ -38,7 +38,7 @@ app.get('/schedule', async (req, res) => {
 });
 
 app.post('/schedule', async (req, res) => {
-    const { id, name, date } = req.body;
+    const { name, date } = req.body;
     try {
         const newSchedule = new Schedule({ id, name, date });
         await newSchedule.save();
