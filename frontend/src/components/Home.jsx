@@ -13,4 +13,7 @@ const Home = () => {
         }
         fetchSchedules()
     }, []);
+
+
+    return
 }
