@@ -7,7 +7,7 @@ function App() {
     const [newTaskName, setNewTaskName] = useState('')
     const [newTaskDate, setNewTaskDate] = useState('')
     const [isDarkMode, setIsDarkMode] = useState(false)
-/*
+
     useEffect(() => {
         if(isDarkMode){
             document.body.classList.add('dark-mode')
@@ -25,7 +25,7 @@ function App() {
             .then(data => setSchedules(data))
             .catch(error => console.error('There is an error!', error))
     }, [])
-*/
+
     useEffect(() => {
         taskService.getAll()
             .then(data => setSchedules(data))
