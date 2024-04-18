@@ -19,7 +19,8 @@ function ScheduleList() {
 
     const deleteSchedule = async (id) => {
         try {
-            const response = await axios.delete('/schedule')
+            const response = await axios.delete('/schedule/${id}')
+            
         }
     }
 
