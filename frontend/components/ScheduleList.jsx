@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import scheduleService from "../services/task.js";
+import scheduleService from "../";
 
 const ScheduleList = ({scheduleId}) => {
     const [schedules, setSchedules] = useState([]);
