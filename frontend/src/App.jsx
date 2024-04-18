@@ -7,7 +7,7 @@ function App() {
     const [newTaskName, setNewTaskName] = useState('')
     const [newTaskDate, setNewTaskDate] = useState('')
     const [isDarkMode, setIsDarkMode] = useState(false)
-
+/*
     useEffect(() => {
         if(isDarkMode){
             document.body.classList.add('dark-mode')
