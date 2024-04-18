@@ -53,6 +53,7 @@
         try{
             const updatedSchedule = await Schedule.findOneAndUpdate(
                 {name},
+                {}
                 {new: true}
             )
             if (updatedSchedule){
