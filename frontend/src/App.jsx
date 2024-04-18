@@ -26,24 +26,25 @@ function App() {
             .catch(error => console.error('There is an error!', error))
     }, [])
 
-    useEffect(() => {
-        taskService.getAll()
-            .then(data => setSchedules(data))
-            .catch(error => console.error('There is an error!', error));
-    }, []);
-
     const addTask = () => {
         const newTask = {
             name: newTaskName,
             date: newTaskDate
         }
-        taskService.create(newTask)
+        fetch('https://final-liangyu.onrender.com/schedule', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newTask)
+        })
+            .then(response => response.json())
             .then(data => {
-                setSchedules([...schedules, data]);
-                setNewTaskName('');
-                setNewTaskDate('');
+                setSchedules([...schedules, data])
+                setNewTaskName('')
+                setNewTaskDate('')
             })
-            .catch(error => console.error('There is an error', error));
+            .catch(error => console.error('There is an error', error))
     }
 
     const deleteTask = (id) => {
