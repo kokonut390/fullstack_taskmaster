@@ -15,7 +15,7 @@ function ScheduleList() {
         };
 
         fetchSchedules();
-    }, []);
+    }, 
 
     return (
         <div>
