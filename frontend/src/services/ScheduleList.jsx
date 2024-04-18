@@ -19,7 +19,7 @@ function ScheduleList({ schedules, fetchSchedules}) {
                 {schedules.map((schedule) => (
                     <li key={schedule._id}>
                         {schedule.name} - {schedule.date}
-                        <button 
+                        <button onClick={}
                     </li>
                 ))}
             </ul>
