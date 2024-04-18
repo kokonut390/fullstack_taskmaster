@@ -43,6 +43,7 @@
             if(existingSchedule){
                 return res.status(400).json({message:'A schedule with the same name already exists.'})
             }
+            
             const newSchedule = new Schedule({ name, date });
             await newSchedule.save();
             res.status(201).json(newSchedule);
