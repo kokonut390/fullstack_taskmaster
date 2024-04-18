@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 
 
-app.use(express.static('dist'))
+
 const app = express();
 const cors = require('cors');
 app.use(cors());
