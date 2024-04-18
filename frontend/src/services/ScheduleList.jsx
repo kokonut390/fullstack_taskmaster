@@ -36,7 +36,9 @@ function ScheduleList() {
             <h2>Schedules</h2>
             <ul>
                 {schedules.map((schedule, index) => (
-                    <li key={index}>{schedule.name} - {schedule.date}</li>
+                    <li key={index}>{schedule.name} - {schedule.date}
+                                            
+                    </li>
                 ))}
             </ul>
         </div>
