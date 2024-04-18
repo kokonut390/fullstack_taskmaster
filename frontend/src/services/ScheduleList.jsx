@@ -2,24 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 const baseUrl = `http://localhost:3001/schedule`
 
-function ScheduleList() {
-    const [schedules, setSchedules] = useState([]);
-
-    useEffect(() => {
-        fetchSchedules();
-    }, []);
-
-    const fetchSchedules = async () => {
-        try {
-            const response = await axios.get(baseUrl);
-            console.log("Fetched schedules:", response.data)
-            setSchedules(response.data);
-        } catch (error) {
-            console.error('Error fetching data: ', error);
-        }
-    };
-
-
+function ScheduleList({ schedules }) {
     return (
         <div>
             <h2>Schedules</h2>
