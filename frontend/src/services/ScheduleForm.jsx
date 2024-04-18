@@ -30,7 +30,7 @@ function ScheduleForm() {
                 placeholder="Name"
             />
             <input
-                type="text"
+                type="date"
                 value={date}
                 onChange={e => setDate(e.target.value)}
                 placeholder="Date"
