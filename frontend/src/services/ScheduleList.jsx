@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-const baseUrl = `/schedule`
+const baseUrl = `http://localhost:3001/schedule`
 
 function ScheduleList() {
     const [schedules, setSchedules] = useState([]);
