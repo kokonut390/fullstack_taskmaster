@@ -68,18 +68,25 @@ app.put('/schedule', async (req, res) => {
     }
 })
 
+const ObjectId = mongoose.Types.ObjectId;
+
 app.delete('/schedule/:id', async (req, res) => {
-    console.log("Backend received request to delete ID:", req.params.id); // Log the ID received on the backend
     try {
-        const result = await Schedule.deleteOne({_id: req.params.id});
-        console.log("Deletion result:", result); // Log the result of the deletion command
-        if(result.deletedCount === 0){
-            return res.status(404).json({message: 'Schedule not found'});
+        // Ensure the ID is a valid ObjectId before attempting deletion
+        if (!ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({ message: 'Invalid ID format' });
         }
-        res.status(200).json({message: 'Schedule deleted'});
+
+        const result = await Schedule.deleteOne({ _id: new ObjectId(req.params.id) });
+
+        if (result.deletedCount === 0) {
+            return res.status(404).json({ message: 'Schedule not found' });
+        }
+
+        res.status(200).json({ message: 'Schedule deleted' });
     } catch (err) {
         console.error(err);
-        res.status(500).json({message: 'Server error'});
+        res.status(500).json({ message: 'Server error' });
     }
 });
 
