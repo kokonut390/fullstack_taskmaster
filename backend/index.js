@@ -70,15 +70,15 @@
     const ObjectId = mongoose.Types.ObjectId;
 
     app.delete('/schedule/:_id', async (req, res) => {
-        const _id = req.params._id
-        console.log("Attempting to delete schedule with _id:", _id)
+        const _id = req.params._id;
+        console.log("Attempting to delete schedule with _id:", _id);
         try {
             // Ensure the ID is a valid ObjectId before attempting deletion
-            if (!ObjectId.isValid(req.params.id)) {
+            if (!ObjectId.isValid(_id)) {
                 return res.status(400).json({ message: 'Invalid ID format' });
             }
 
-            const result = await Schedule.deleteOne({ _id: new ObjectId(req.params.id) });
+            const result = await Schedule.deleteOne({ _id: new ObjectId(_id) });
 
             if (result.deletedCount === 0) {
                 return res.status(404).json({ message: 'Schedule not found' });
