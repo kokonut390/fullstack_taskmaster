@@ -9,7 +9,7 @@ function ScheduleList({ schedules, fetchSchedules}) {
             console.log('Schedule deleted:', response.data)
             fetchSchedules
         }catch (error){
-            console.error('Error deleting ')
+            console.error('Error deleting schedules')
         }
     }
     return (
