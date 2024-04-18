@@ -25,12 +25,6 @@ function ScheduleForm() {
             <h2>Add/Update Schedule</h2>
             <input
                 type="text"
-                value={id}
-                onChange={e => setId(e.target.value)}
-                placeholder="ID"
-            />
-            <input
-                type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
                 placeholder="Name"
