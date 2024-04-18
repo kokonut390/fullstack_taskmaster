@@ -18,7 +18,9 @@ function ScheduleList() {
     };
 
     const deleteSchedule = async (id) => {
-        
+        try {
+            
+        }
     }
 
 
