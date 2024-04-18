@@ -14,7 +14,7 @@ const ScheduleList = ({scheduleId}) => {
                 setSchedules([]);
             });
         }
-    }, [scheduleID]);
+    }, [scheduleId]);
 
     if (!schedules || schedules.length === 0) {
         return <p>No schedules.</p>;
