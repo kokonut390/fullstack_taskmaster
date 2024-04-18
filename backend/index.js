@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 const cors = require('cors');
+app.use(express.static('dist'))
 app.use(cors());
 const password = process.argv[2]
 
