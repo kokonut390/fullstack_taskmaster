@@ -7,7 +7,7 @@ const Home = () => {
 
     useEffect(() => {
         const fetchSchedules = async () => {
-            const data = await 
+            const data = await scheduleService
         }
     }, []);
 }
