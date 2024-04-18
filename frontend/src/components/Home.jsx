@@ -17,7 +17,7 @@ const Home = () => {
 
     return(
         <div>
-            <h2></h2>
+            <h2>Schedule</h2>
         </div>
     )
 }
