@@ -10,7 +10,7 @@ function ScheduleForm() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3001/schedule', { id, name, date });
+            const response = await axios.post(baseUrl, { id, name, date });
             console.log('Schedule added/updated:', response.data);
             // Clear form
             setId('');
