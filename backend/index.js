@@ -8,6 +8,7 @@ const cors = require('cors');
 app.use(express.static('dist'))
 app.use(cors());
 const password = process.argv[2]
+const ObjectId = mongoose.Types.ObjectId;
 
 const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/schedule?retryWrites=true&w=majority&appName=Cluster0`
 
