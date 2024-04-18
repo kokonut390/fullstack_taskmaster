@@ -23,6 +23,7 @@ function ScheduleForm(props) {
                 setError(error.response.data.message)
             }
             console.error('Error adding/updating schedule:', error);
+            setError()
         }
     };
 
