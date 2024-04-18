@@ -26,7 +26,11 @@ function App() {
             .catch(error => console.error('There is an error!', error))
     }, [])
 */
-    
+    useEffect(() => {
+        tasks.getAll()
+            .then(data => setSchedules(data))
+            .catch(error => console.error('There is an error!', error));
+    }, []);
 
     const addTask = () => {
         const newTask = {
