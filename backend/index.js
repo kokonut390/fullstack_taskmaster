@@ -70,16 +70,17 @@ app.put('/schedule', async (req, res) => {
 
 app.delete('/schedule/:id', async (req, res) => {
     try {
-        const result = await Schedule.deleteOne({id: req.params.id})
+        const result = await Schedule.deleteOne({id: req.params.id});
         if(result.deletedCount === 0){
-            return res.status(404).json({message: 'Schedule not found'})
+            return res.status(404).json({message: 'Schedule not found'});
         }
-        res.status(200).json({message: 'Schedule deleted'})
-    }catch (err){
-        console.error(err)
-        res.status(500).json({message: 'Server error'})
+        res.status(200).json({message: 'Schedule deleted'});
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({message: 'Server error'});
     }
-})
+});
+
 
 
 const PORT = process.env.PORT || 3001
