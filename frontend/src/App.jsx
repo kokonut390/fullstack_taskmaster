@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.css'
-import ScheduleList from './services/ScheduleList.jsx'
+import ScheduleList from './services/ScheduleList.js'
 import ScheduleForm from './services/ScheduleForm.js'
 
 function App() {
