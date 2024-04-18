@@ -3,9 +3,20 @@ import ScheduleList from './services/ScheduleList.jsx'
 import ScheduleForm from './services/ScheduleForm.jsx'
 
 function App() {
-    const addSchedule = (newSchedule) => {
-        setSchedules(prevSchedules => [...prevSchedules, newSchedule]);
+    onst [schedules, setSchedules] = useState([]);
+
+    const fetchSchedules = async () => {
+        try {
+            const response = await axios.get(baseUrl);
+            setSchedules(response.data);
+        } catch (error) {
+            console.error('Error fetching data: ', error);
+        }
     };
+
+    useEffect(() => {
+        fetchSchedules();
+    }, []);
 
     return (
         <div>
