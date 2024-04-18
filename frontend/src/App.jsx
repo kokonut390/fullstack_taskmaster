@@ -23,7 +23,7 @@ function App() {
         fetch('https://final-liangyu.onrender.com/schedule')
             .then(response => response.json())
             .then(data => {
-                console.log()
+                console.log(data)
                 setSchedules(data)
             })
             .catch(error => console.error('There is an error!', error))
