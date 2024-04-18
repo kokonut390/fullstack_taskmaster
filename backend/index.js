@@ -17,7 +17,6 @@ mongoose.connect(url)
 
 // Meme Schema
 const scheduleSchema = new mongoose.Schema({
-    id: String,
     name: String,
     date: String
 });
