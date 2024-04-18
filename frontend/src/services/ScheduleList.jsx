@@ -4,7 +4,9 @@ const baseUrl = `http://localhost:3001/schedule`
 
 function ScheduleList({ schedules, fetchSchedules}) {
     const handleDelete = async (_id) => {
-        
+        try {
+            
+        }
     }
     return (
         <div>
