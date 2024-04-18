@@ -23,7 +23,7 @@ const scheduleSchema = new mongoose.Schema({
 
 const Schedule = mongoose.model('Schedule', scheduleSchema);
 
-app.use(bodyParser.json());
+app.use(express.json());
 
 // Routes
 app.get('/schedule', async (req, res) => {
