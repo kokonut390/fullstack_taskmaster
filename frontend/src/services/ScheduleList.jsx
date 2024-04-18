@@ -10,7 +10,7 @@ function ScheduleList() {
 
     const fetchSchedules = async () => {
         try {
-            const response = await axios.get('http://localhost:3001//schedule');
+            const response = await axios.get('http://localhost:3001/schedule');
             setSchedules(response.data);
         } catch (error) {
             console.error('Error fetching data: ', error);
