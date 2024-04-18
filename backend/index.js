@@ -68,7 +68,7 @@ app.put('/schedule', async (req, res) => {
 
 const ObjectId = mongoose.Types.ObjectId;
 
-app.delete('/schedule/:id', async (req, res) => {
+app.delete('/schedule/:_id', async (req, res) => {
     const _id = req.params.id
     console.log("Attempting to delete schedule with _id:", _id)
     try {
