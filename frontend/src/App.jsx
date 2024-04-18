@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import ScheduleList from './services/ScheduleList.jsx'
 import ScheduleForm from './services/ScheduleForm.jsx'
 const baseUrl = `http://localhost:3001/schedule`
+import axios from "axios";
 
 function App() {
     const [schedules, setSchedules] = useState([]);
