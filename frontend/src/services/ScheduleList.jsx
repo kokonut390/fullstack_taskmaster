@@ -25,7 +25,7 @@ function ScheduleList() {
                 console.log('Schedule deleted', response.data)
             }
         }catch (error){
-            
+            console.error()
         }
     }
 
