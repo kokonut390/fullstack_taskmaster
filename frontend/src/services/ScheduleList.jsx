@@ -22,7 +22,7 @@ function ScheduleList() {
             const response = await axios.delete('/schedule/${id}')
             if(response.status === 200){
                 setSchedules(schedules.filter(schedule => schedule.id !== id))
-                console.log()
+                console.log('Schedule deleted')
             }
         }
     }
