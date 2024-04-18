@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 const baseUrl = `http://localhost:3001/schedule`
 
-function ScheduleForm() {
+function ScheduleForm(props) {
     const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [date, setDate] = useState('');
