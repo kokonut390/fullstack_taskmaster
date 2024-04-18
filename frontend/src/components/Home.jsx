@@ -1,8 +1,9 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useEffect, useState} from "react";
 import scheduleService from '../services/tasks.js'
 
 const Home = () => {
+    const [, set] = useState()
 
 
     useEffect(() => {
