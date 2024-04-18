@@ -41,7 +41,7 @@
         try {
             const existingSchedule = await Schedule.findOne({name})
             if(existingSchedule){
-                
+                return
             }
             const newSchedule = new Schedule({ name, date });
             await newSchedule.save();
