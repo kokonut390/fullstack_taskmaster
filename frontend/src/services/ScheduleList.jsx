@@ -19,20 +19,6 @@ function ScheduleList() {
         }
     };
 
-    const deleteSchedule = async (_id) => {
-        console.log("Attempting to delete schedule with _id:", _id)
-        try {
-            const response = await axios.delete(`http://localhost:3001/schedule/${_id}`)
-            if(response.status === 200){
-                setSchedules(schedules.filter(schedule => schedule._id !== _id))
-                console.log('Schedule deleted', response.data)
-            }
-        }catch (error){
-            console.error('Error deleting schedule', error)
-        }
-    }
-
-
 
     return (
         <div>
