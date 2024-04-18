@@ -52,7 +52,7 @@
         const {name, date} =req.body
         try{
             const updatedSchedule = await Schedule.findOneAndUpdate(
-                {name, date},
+                {name},
                 {new: true}
             )
             if (updatedSchedule){
