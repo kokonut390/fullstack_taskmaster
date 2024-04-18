@@ -19,7 +19,7 @@ function ScheduleList() {
         }
     };
 
-    const deleteSchedule = async (id) => {
+    const deleteSchedule = async (_id) => {
         console.log("Attempting to delete schedule with _id:", _id)
         try {
             const response = await axios.delete(`http://localhost:3001/schedule/${_id}`)
