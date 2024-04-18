@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './index.css'
-import taskService from './services/tasks.js'
+
 
 function App() {
     const [schedules, setSchedules] = useState([])
