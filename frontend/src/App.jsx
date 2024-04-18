@@ -4,63 +4,6 @@ import ScheduleList from './services/ScheduleList.js'
 import ScheduleForm from './services/ScheduleForm.js'
 
 function App() {
-    const [schedules, setSchedules] = useState([])
-    const [newTaskName, setNewTaskName] = useState('')
-    const [newTaskDate, setNewTaskDate] = useState('')
-    const [isDarkMode, setIsDarkMode] = useState(false)
-
-    useEffect(() => {
-        if(isDarkMode){
-            document.body.classList.add('dark-mode')
-            document.body.classList.remove('light-mode')
-        }else {
-            document.body.classList.add('light-mode')
-            document.body.classList.remove('dark-mode')
-        }
-    }, [isDarkMode])
-
-
-    useEffect(()=> {
-        fetch(`/schedule`)
-            .then(response => response.json())
-            .then(data => setSchedules(data))
-            .catch(error => console.error('There is an error!', error))
-    }, [])
-
-    const addTask = () => {
-        const newTask = {
-            name: newTaskName,
-            date: newTaskDate
-        }
-        fetch(`/schedule`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newTask)
-        })
-            .then(response => response.json())
-            .then(data => {
-                setSchedules([...schedules, data])
-                setNewTaskName('')
-                setNewTaskDate('')
-            })
-            .catch(error => console.error('There is an error', error))
-    }
-
-    const deleteTask = (id) => {
-        if (window.confirm("Are you sure you want to delete this schedule?")){
-            fetch(`/schedule/${id}`, {
-                method: 'DELETE'
-            })
-                .then(response => response.json())
-                .then(() => {
-                    setSchedules(schedules.filter(schedule => schedule.id !== id))
-                })
-                .catch(error => console.error('Error deleting the task', error))
-        }
-    }
-
 
     return (
         <div>
