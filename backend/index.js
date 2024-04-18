@@ -11,7 +11,7 @@ app.use(cors());
 /*
 app.use(express.static('dist'))
 */
- */
+
 const password = process.argv[2]
 
 const url = `mongodb+srv://comp227:${password}@cluster0.rt7kzix.mongodb.net/schedule?retryWrites=true&w=majority&appName=Cluster0`
