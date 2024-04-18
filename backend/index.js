@@ -40,6 +40,7 @@
         const { name, date } = req.body;
         try {
             const existingSchedule = await Schedule.findOne({name})
+            if(existingSchedule)
             const newSchedule = new Schedule({ name, date });
             await newSchedule.save();
             res.status(201).json(newSchedule);
