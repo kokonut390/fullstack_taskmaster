@@ -11,5 +11,6 @@ const Home = () => {
             const data = await scheduleService.getAllSchedules()
             setSchedules(data)
         }
+        fetchSchedules()
     }, []);
 }
