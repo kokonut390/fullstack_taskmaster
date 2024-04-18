@@ -7,6 +7,7 @@ function ScheduleList({ schedules, fetchSchedules}) {
         try {
             const response = await axios.delete(`${baseUrl}/${_id}`)
             console.log('Schedule deleted:', response.data)
+            fetchSchedules
         }
     }
     return (
