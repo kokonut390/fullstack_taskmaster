@@ -18,6 +18,7 @@ function ScheduleForm(props) {
             setName('');
             setDate('');
             props.fetchSchedules()
+            setError('')
         } catch (error) {
             if (error.response && error.response.status === 400){
                 setError(error.response.data.message)
