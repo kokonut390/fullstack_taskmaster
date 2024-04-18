@@ -9,7 +9,7 @@ const Home = () => {
     useEffect(() => {
         const fetchSchedules = async () => {
             const data = await scheduleService.getAllSchedules()
-            setSchedules()
+            setSchedules(data)
         }
     }, []);
 }
