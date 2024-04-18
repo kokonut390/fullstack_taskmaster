@@ -24,7 +24,7 @@ function ScheduleList() {
         <div>
             <h2>Schedules</h2>
             <ul>
-                {schedules.map((schedule index) => (
+                {schedules.map((schedule) => (
                     <li key={schedule._id}>
                         {schedule.name} - {schedule.date}
                     </li>
