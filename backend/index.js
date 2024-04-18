@@ -69,8 +69,10 @@ app.put('/schedule', async (req, res) => {
 })
 
 app.delete('/schedule/:id', async (req, res) => {
+    console.log("Backend received request to delete ID:", req.params.id); // Log the ID received on the backend
     try {
         const result = await Schedule.deleteOne({_id: req.params.id});
+        console.log("Deletion result:", result); // Log the result of the deletion command
         if(result.deletedCount === 0){
             return res.status(404).json({message: 'Schedule not found'});
         }
