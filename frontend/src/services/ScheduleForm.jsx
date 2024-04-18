@@ -18,7 +18,7 @@ function ScheduleForm(props) {
             setDate('');
             props.fetchSchedules()
         } catch (error) {
-            if (())
+            if ((error.response && error.response.status))
             console.error('Error adding/updating schedule:', error);
         }
     };
