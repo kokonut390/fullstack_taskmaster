@@ -24,7 +24,9 @@ function App() {
 
     return (
         <div className={darkMode ?'dark-mode' : 'light-mode'}>
-            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10', right:'10'}}
+            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10', right:'10'}}>
+                
+            </button>
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
