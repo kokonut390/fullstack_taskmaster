@@ -23,7 +23,7 @@ function App() {
     }, []);
 
     return (
-        <div>
+        <div className={}>
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
