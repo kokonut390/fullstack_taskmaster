@@ -9,8 +9,11 @@ function App() {
     const [schedules, setSchedules] = useState([]);
     const [darkMode, setDarkMode] = useState(false)
 
-    console.log(darkMode)
+    
     const toggleDarkMode = () => setDarkMode(!darkMode)
+    useEffect(() => {
+        document.body.className = darkMode ? 'dark-mode' : 'light-mode';
+    }, [darkMode]);
     const fetchSchedules = async () => {
         try {
             const response = await axios.get(baseUrl);

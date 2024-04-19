@@ -1,4 +1,6 @@
-
+body {
+    color-scheme: light dark;
+}
 .light-mode {
     background-color: #fff;
     color: #333;
