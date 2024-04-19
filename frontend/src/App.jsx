@@ -9,7 +9,7 @@ function App() {
     const [schedules, setSchedules] = useState([]);
     const [darkMode, setDarkMode] = useState(false)
 
-    
+
     const toggleDarkMode = () => setDarkMode(!darkMode)
     useEffect(() => {
         document.body.className = darkMode ? 'dark-mode' : 'light-mode';
@@ -28,7 +28,7 @@ function App() {
     }, []);
 
     return (
-        <div className={darkMode ?'dark-mode' : 'light-mode'}>
+        <div>
             <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10px'}}>
                 {darkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
