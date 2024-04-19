@@ -3,7 +3,7 @@ import ScheduleList from './services/ScheduleList.jsx'
 import ScheduleForm from './services/ScheduleForm.jsx'
 const baseUrl = `http://localhost:3001/schedule`
 import axios from "axios";
-import 
+import 'index.css'
 
 function App() {
     const [schedules, setSchedules] = useState([]);
