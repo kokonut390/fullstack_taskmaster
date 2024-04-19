@@ -24,7 +24,7 @@ function App() {
 
     return (
         <div className={darkMode ?'dark-mode' : 'light-mode'}>
-            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10', right:'10'}}>
+            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10'}}>
                 {darkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
             <h1>Schedule Manager</h1>
