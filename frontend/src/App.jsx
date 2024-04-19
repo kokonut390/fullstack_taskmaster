@@ -24,7 +24,7 @@ function App() {
 
     return (
         <div className={darkMode ?'dark-mode' : 'light-mode'}>
-            <button onClick={toggleDarkMode}
+            <button onClick={toggleDarkMode} style={}
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
