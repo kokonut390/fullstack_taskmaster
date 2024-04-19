@@ -6,7 +6,7 @@ import axios from "axios";
 
 function App() {
     const [schedules, setSchedules] = useState([]);
-    const [darkMode, setDarkMode] = useState()
+    const [darkMode, setDarkMode] = useState(false)
 
     const fetchSchedules = async () => {
         try {
