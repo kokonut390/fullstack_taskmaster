@@ -23,7 +23,7 @@ function App() {
     }, []);
 
     return (
-        <div className={darkMode ?''}>
+        <div className={darkMode ?'dark-mode' }>
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
