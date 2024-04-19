@@ -8,6 +8,7 @@ function App() {
     const [schedules, setSchedules] = useState([]);
     const [darkMode, setDarkMode] = useState(false)
 
+    console.log(darkMode)
     const toggleDarkMode = () => setDarkMode(!darkMode)
     const fetchSchedules = async () => {
         try {
