@@ -24,7 +24,7 @@
     const Schedule = mongoose.model('Schedule', scheduleSchema);
 
     const availabilitySchema = new mongoose.Schema({
-        week: 
+        week: Number
     })
 
     app.use(express.json());
