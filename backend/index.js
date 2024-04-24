@@ -31,7 +31,7 @@
             endTime: String
         }]
     });
-    
+
     const Availability = mongoose.model('Availability', availabilitySchema)
 
     app.use(express.json());
