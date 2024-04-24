@@ -131,7 +131,9 @@
                 {upsert: true, new: true}
             )
             res.json(availability)
-        }catch ()
+        }catch (err){
+            
+        }
     })
 
 
