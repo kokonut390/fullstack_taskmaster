@@ -15,7 +15,7 @@ function AvailabilityForm ({userId}){
                 week,
                 days
             })
-            console.log()
+            console.log('Availability added/updated:', response.data)
         }
     }
 }
