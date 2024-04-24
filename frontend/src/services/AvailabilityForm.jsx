@@ -23,7 +23,7 @@ function AvailabilityForm ({userId}){
                 weekNumber,
                 availableSlots
             })
-            console.log('Availability added/updated:', event.data)
+            console.log('Availability added/updated:', response.data)
         }catch (err){
             console.error('Error updating availability:', err)
         }
