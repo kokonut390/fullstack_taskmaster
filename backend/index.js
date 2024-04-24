@@ -122,20 +122,20 @@
     });
 
     app.post('/availability', async (req, res) => {
-        const {userId, week, days} = req.body
+        const { userId, weekNumber, availableSlots } = req.body;
         try {
-            const availabilityData = {userId, week, days}
+            const availabilityData = { userId, weekNumber, availableSlots };
             const availability = await Availability.findOneAndUpdate(
-                {userId, week},
+                { userId, weekNumber },
                 availabilityData,
-                {upsert: true, new: true}
-            )
-            res.json(availability)
-        }catch (err){
-            console.error(err)
-            res.status(500).json({message: 'Server error'})
+                { upsert: true, new: true }
+            );
+            res.json(availability);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Server error' });
         }
-    })
+    });
 
 
 
