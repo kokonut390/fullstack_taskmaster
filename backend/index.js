@@ -119,8 +119,7 @@ app.get('/availability/:userId', async (req, res) => {
         console.error(err)
         res.status(500).json({message: 'Server error'})
     }
-})
-    app.post
+})app.post
 
 
 
