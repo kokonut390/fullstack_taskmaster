@@ -33,7 +33,7 @@
             }]
         }]
     })
-    const 
+    const Availability = mongoose.model()
 
     app.use(express.json());
 
