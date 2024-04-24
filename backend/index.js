@@ -27,7 +27,9 @@
         week: Number,
         days: [{
             day: String,
-            times: 
+            times: [{
+                start
+            }]
         }]
     })
 
