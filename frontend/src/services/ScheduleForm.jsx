@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-const baseUrl = `\`/api/schedule\``
+const baseUrl = `https://final-liangyu.onrender.com/schedule`
 
 function ScheduleForm(props) {
     const [id, setId] = useState('');
