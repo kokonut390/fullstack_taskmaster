@@ -13,6 +13,7 @@ function getWeekNumber(d) {
 
 
 function AvailabilityForm ({userId}){
+    const [weekNumber, setWeekNumber] = useState(getWeekNumber(new Date()))
     const [weekNumber, setWeekNumber] = useState()
     const [availableSlots, setAvailableSlots] = useState([])
 
