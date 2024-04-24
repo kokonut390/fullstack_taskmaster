@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import ScheduleList from './services/ScheduleList.jsx'
 import ScheduleForm from './services/ScheduleForm.jsx'
-const baseUrl = `/api/schedule`
+const baseUrl = `https://final-liangyu.onrender.com/schedule`
 import axios from "axios";
 import './index.css'
 
