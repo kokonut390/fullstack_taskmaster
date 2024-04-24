@@ -17,7 +17,7 @@ function AvailabilityForm ({userId}){
             })
             console.log('Availability added/updated:', response.data)
         }catch (err){
-            console.error(err)
+            console.error('Error updating availability:', err)
         }
     }
 }
