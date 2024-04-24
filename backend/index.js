@@ -25,7 +25,7 @@
 
     const availabilitySchema = new mongoose.Schema({
 
-        userId:
+        userId: 
         week: Number,
         days: [{
             day: String,
