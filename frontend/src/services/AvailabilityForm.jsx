@@ -15,6 +15,7 @@ function AvailabilityForm ({userId}){
                 week,
                 days
             })
+            console.log()
         }
     }
 }
