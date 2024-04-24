@@ -11,7 +11,9 @@ function AvailabilityForm ({userId}){
         event.preventDefault()
         try {
             const response = await axios.post(`${baseUrl}/availability`, {
-                
+                userId,
+                week,
+                days
             })
         }
     }
