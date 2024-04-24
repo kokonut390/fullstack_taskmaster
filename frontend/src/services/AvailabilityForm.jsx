@@ -20,4 +20,5 @@ function AvailabilityForm ({userId}){
             console.error('Error updating availability:', err)
         }
     }
+    return
 }
