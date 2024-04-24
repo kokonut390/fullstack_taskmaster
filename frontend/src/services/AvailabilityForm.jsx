@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-const baseUrl = `http://localhost:3001/availability`
+const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 function getWeekNumber(d) {
     d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
