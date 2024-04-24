@@ -121,7 +121,7 @@
         }
     })
 
-    app.post()
+    app.post('/availability', )
 
 
 
