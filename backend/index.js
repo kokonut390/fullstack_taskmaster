@@ -107,33 +107,6 @@
         }
     });
 
-    app.get('/availability', async (req, res) => {
-        try {
-            const { userId, weekNumber } = req.params;
-            const availability = await Availability.findOne({ userId, weekNumber });
-            res.json(availability);
-        } catch (err) {
-            console.error(err);
-            res.status(500).json({ message: 'Server error' });
-        }
-    });
-
-    app.post('/availability', async (req, res) => {
-        const { userId, weekNumber, availableSlots } = req.body;
-        try {
-            const availabilityData = { userId, weekNumber, availableSlots };
-            const availability = await Availability.findOneAndUpdate(
-                { userId, weekNumber },
-                availabilityData,
-                { upsert: true, new: true }
-            );
-            res.json(availability);
-        } catch (err) {
-            console.error(err);
-            res.status(500).json({ message: 'Server error' });
-        }
-    });
-
 
 
     const PORT = process.env.PORT || 3001
