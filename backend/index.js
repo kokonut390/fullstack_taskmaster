@@ -123,7 +123,9 @@
 
     app.post('/availability', async (req, res) => {
         const {userId, week, days} = req.body
-        
+        try {
+            
+        }
     })
 
 
