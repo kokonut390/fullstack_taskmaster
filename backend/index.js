@@ -25,7 +25,9 @@
 
     const availabilitySchema = new mongoose.Schema({
         week: Number,
-        days: 
+        days: [{
+            
+        }]
     })
 
     app.use(express.json());
