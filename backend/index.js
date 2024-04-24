@@ -28,7 +28,7 @@
         days: [{
             day: String,
             times: [{
-                start
+                start: String
             }]
         }]
     })
