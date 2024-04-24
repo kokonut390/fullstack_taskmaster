@@ -21,6 +21,6 @@ function AvailabilityForm ({userId}){
         }
     }
     return(
-        <form onSubmit={}
+        <form onSubmit={handleSubmit}
     )
 }
