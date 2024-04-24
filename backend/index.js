@@ -110,16 +110,16 @@
         }
     });
 
-app.get('/availability/:userId', async (req, res) => {
-    try {
-        const {userId} = req.params
-        const availability = await Availability.find({userId})
-        res.json(availability)
-    }catch (err){
-        console.error(err)
-        res.status(500).json({message: 'Server error'})
-    }
-})
+    app.get('/availability/:userId', async (req, res) => {
+        try {
+            const {userId} = req.params
+            const availability = await Availability.find({userId})
+            res.json(availability)
+        }catch (err){
+            console.error(err)
+            res.status(500).json({message: 'Server error'})
+        }
+    })
     app.post
 
 
