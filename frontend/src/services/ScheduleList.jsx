@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-const baseUrl = `http://final-liangyu.onrender.com/schedule`
+const baseUrl = `http://localhost:3001/schedule`
 
 function ScheduleList({ schedules, fetchSchedules}) {
     const handleDelete = async (_id) => {
