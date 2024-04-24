@@ -30,7 +30,7 @@ function AvailabilityForm ({userId}){
     }
     return(
         <form onSubmit={handleSubmit}>
-            <h2
+            <h2>Set Availability</h2>
             <button type="submit">Submit</button>
         </form>
     )
