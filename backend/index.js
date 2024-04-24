@@ -23,6 +23,8 @@
 
     const Schedule = mongoose.model('Schedule', scheduleSchema);
 
+    const availabilitySchema
+
     app.use(express.json());
 
     // Routes
@@ -96,7 +98,7 @@
         }
     });
 
-    
+
 
 
 
