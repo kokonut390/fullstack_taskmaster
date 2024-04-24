@@ -128,7 +128,7 @@
             const availability = await Availability.findOneAndUpdate(
                 {userId, week},
                 availabilityData,
-                {upsert: true}
+                {upsert: true, new}
             )
         }
     })
