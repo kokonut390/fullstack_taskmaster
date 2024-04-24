@@ -36,7 +36,7 @@ function App() {
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
-            <AvailabilityForm userId={} />
+            <AvailabilityForm />
         </div>
     );
 }
