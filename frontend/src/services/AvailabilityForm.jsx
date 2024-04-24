@@ -4,6 +4,7 @@ const baseUrl = `http://localhost:3001/schedule`
 
 function AvailabilityForm ({userId}){
     const [weekNumber, setWeekNumber] = useState()
+    const [, set] = useState()
 
     const handleSubmit = async (event) => {
         event.preventDefault()
