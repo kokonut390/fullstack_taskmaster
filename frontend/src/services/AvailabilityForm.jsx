@@ -25,3 +25,5 @@ function AvailabilityForm ({userId}){
         </form>
     )
 }
+
+export default AvailabilityForm
