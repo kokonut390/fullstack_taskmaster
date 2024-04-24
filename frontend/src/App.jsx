@@ -38,7 +38,7 @@ function App() {
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
         </div>
         <div>
-            <AvailabilityForm
+            <AvailabilityForm userId={}
         </div>
     );
 }
