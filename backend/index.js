@@ -15,7 +15,7 @@
         .then(()=>{console.log("Connected to MongoDB")})
         .catch((error)=>{console.log(error.message)});
 
-    // Meme Schema
+    //  Schema
     const scheduleSchema = new mongoose.Schema({
         name: String,
         date: String
