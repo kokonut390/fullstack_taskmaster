@@ -7,6 +7,6 @@ function AvailabilityForm ({userId}){
     const [days, setDays] = useState([])
 
     const handleSubmit = async (event) => {
-        
+        event.preventDefault()
     }
 }
