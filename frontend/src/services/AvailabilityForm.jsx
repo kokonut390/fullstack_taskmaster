@@ -22,7 +22,7 @@ function AvailabilityForm ({userId}){
     }
     return(
         <form onSubmit={handleSubmit}>
-            
+
         </form>
     )
 }
