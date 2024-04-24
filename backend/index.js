@@ -122,7 +122,7 @@
     })
 
     app.post('/availability', async (req, res) => {
-        const {userId, }
+        const {userId, week, days}
     })
 
 
