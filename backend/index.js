@@ -130,7 +130,7 @@
                 availabilityData,
                 {upsert: true, new: true}
             )
-            res.
+            res.json
         }
     })
 
