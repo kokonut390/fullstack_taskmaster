@@ -9,7 +9,7 @@ function AvailabilityForm ({userId}){
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const response = 
+            const response = await axios.
         }
     }
 }
