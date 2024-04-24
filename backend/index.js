@@ -111,7 +111,9 @@
     });
 
 app.get('/availability/:userId', async (req, res) => {
-    
+    try {
+        
+    }
 })
 
 
