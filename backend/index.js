@@ -121,7 +121,7 @@
         }
     })
 
-    app.post('/availability', async )
+    app.post('/availability', async (req, res))
 
 
 
