@@ -3,8 +3,7 @@ import axios from "axios";
 const baseUrl = `http://localhost:3001/schedule`
 
 function AvailabilityForm ({userId}){
-    const [weekN, setWeek] = useState(new Date().getWeekNumber)
-    const [days, setDays] = useState([])
+    const [weekNumber, setWeekNumber] = useState()
 
     const handleSubmit = async (event) => {
         event.preventDefault()
