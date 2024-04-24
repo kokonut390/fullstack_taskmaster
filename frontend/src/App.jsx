@@ -37,9 +37,6 @@ function App() {
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
         </div>
-        <div>
-
-        </div>
     );
 }
 
