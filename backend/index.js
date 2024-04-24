@@ -110,7 +110,7 @@
         }
     });
 
-app.get('/availability/:userId')
+app.get('/availability/:userId', async )
 
 
 
