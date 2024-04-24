@@ -130,6 +130,7 @@
                 availabilityData,
                 {upsert: true, new: true}
             )
+            res.
         }
     })
 
