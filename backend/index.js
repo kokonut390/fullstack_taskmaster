@@ -133,7 +133,7 @@
             res.json(availability)
         }catch (err){
             console.error(err)
-            res.status(500).json({message: ''})
+            res.status(500).json({message: 'Server error'})
         }
     })
 
