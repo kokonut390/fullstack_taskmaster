@@ -3,5 +3,5 @@ import {useState} from "react";
 import axios from "axios";
 
 function AvailabilityForm ({userId}){
-    const [, set] = useState()
+    const [week, setWeek] = useState()
 }
