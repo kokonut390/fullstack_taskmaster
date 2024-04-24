@@ -24,16 +24,14 @@
     const Schedule = mongoose.model('Schedule', scheduleSchema);
 
     const availabilitySchema = new mongoose.Schema({
-
-        week: Number,
-        days: [{
-            day: String,
-            times: [{
-                start: String,
-                end: String
-            }]
+        weekNumber: Number,
+        availableSlots: [{
+            dayOfWeek: Number,
+            startTime: String,
+            endTime: String
         }]
-    })
+    });
+    
     const Availability = mongoose.model('Availability', availabilitySchema)
 
     app.use(express.json());
