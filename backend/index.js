@@ -109,7 +109,7 @@
 
     app.get('/availability/:userId/:weekNumber', async (req, res) => {
         try {
-            const { weekNumber } = req.params;
+            const { userId, weekNumber } = req.params;
             const availability = await Availability.findOne({ userId, weekNumber });
             res.json(availability);
         } catch (err) {
