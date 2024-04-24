@@ -107,7 +107,7 @@
         }
     });
 
-    app.get('/availability/:userId/:weekNumber', async (req, res) => {
+    app.get('/availability', async (req, res) => {
         try {
             const { userId, weekNumber } = req.params;
             const availability = await Availability.findOne({ userId, weekNumber });
