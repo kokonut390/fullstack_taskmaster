@@ -110,7 +110,9 @@
         }
     });
 
-app.get('/availability/:userId', async (req, res))
+app.get('/availability/:userId', async (req, res) => {
+    
+})
 
 
 
