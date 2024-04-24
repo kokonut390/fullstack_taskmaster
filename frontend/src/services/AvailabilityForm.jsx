@@ -4,5 +4,5 @@ import axios from "axios";
 
 function AvailabilityForm ({userId}){
     const [week, setWeek] = useState(new Date().getWeekNumber)
-    const [, set] = useState()
+    const [days, setDays] = useState()
 }
