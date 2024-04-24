@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-const baseUrl = `http://localhost:3001/schedule`
+const baseUrl = `http://localhost:3001/availability`
 
 function AvailabilityForm ({userId}){
     const [weekNumber, setWeekNumber] = useState()
