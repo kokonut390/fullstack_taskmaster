@@ -113,7 +113,7 @@
 app.get('/availability/:userId', async (req, res) => {
     try {
         const {userId} = req.params
-        const a
+        const availability 
     }
 })
 
