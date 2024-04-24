@@ -19,8 +19,7 @@ function AvailabilityForm ({userId}){
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            await axios.post(`${baseUrl}/availability`, {
-                userId,
+            const response = await axios.post(baseUrl, {
                 weekNumber,
                 availableSlots
             })
