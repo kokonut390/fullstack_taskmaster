@@ -23,7 +23,7 @@
 
     const Schedule = mongoose.model('Schedule', scheduleSchema);
 
-    const availabilitySchema = new
+    const availabilitySchema = new mongoose
 
     app.use(express.json());
 
