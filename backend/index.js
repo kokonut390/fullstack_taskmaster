@@ -122,7 +122,7 @@
     })
 
     app.post('/availability', async (req, res) => {
-        const 
+        const {userId, }
     })
 
 
