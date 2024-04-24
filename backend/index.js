@@ -125,7 +125,7 @@
         const {userId, week, days} = req.body
         try {
             const availabilityData = {userId, week, days}
-            const availability = await 
+            const availability = await Availability.f
         }
     })
 
