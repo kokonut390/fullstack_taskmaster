@@ -9,10 +9,10 @@ function AvailabilityForm ({userId}){
     const handleSubmit = async (event) => {
         event.preventDefault()
         try {
-            const response = await axios.post(`${baseUrl}/availability`, {
+            await axios.post(`${baseUrl}/availability`, {
                 userId,
-                week,
-                days
+                weekNumber,
+                availableSlots
             })
             console.log('Availability added/updated:', response.data)
         }catch (err){
