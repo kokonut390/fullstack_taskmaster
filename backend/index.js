@@ -124,7 +124,8 @@
     app.post('/availability', async (req, res) => {
         const {userId, week, days} = req.body
         try {
-            const availabilityData = {}
+            const availabilityData = {userId, week, days}
+            
         }
     })
 
