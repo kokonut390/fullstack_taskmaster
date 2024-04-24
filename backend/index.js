@@ -132,7 +132,7 @@
             )
             res.json(availability)
         }catch (err){
-            
+            console.error(err)
         }
     })
 
