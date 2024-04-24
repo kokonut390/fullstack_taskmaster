@@ -3,7 +3,7 @@ import axios from "axios";
 const baseUrl = `http://localhost:3001/availability`
 
 function getWeekNumber(d) {
-    // Copy date so don't modify original
+    
     d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
     // Set to nearest Thursday: current date + 4 - current day number
     // Make Sunday's day number 7
@@ -12,7 +12,7 @@ function getWeekNumber(d) {
     const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
     // Calculate full weeks to nearest Thursday
     const weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
-    // Return array of year and week number
+
     return weekNo;
 }
 
