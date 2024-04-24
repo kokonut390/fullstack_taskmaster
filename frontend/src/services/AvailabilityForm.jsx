@@ -30,6 +30,7 @@ function AvailabilityForm ({userId}){
     }
     return(
         <form onSubmit={handleSubmit}>
+            <h2
             <button type="submit">Submit</button>
         </form>
     )
