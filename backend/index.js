@@ -115,7 +115,7 @@ app.get('/availability/:userId', async (req, res) => {
         const {userId} = req.params
         const availability = await Availability.find({userId})
         res.json(availability)
-    }
+    }catch ()
 })
 
 
