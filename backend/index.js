@@ -116,7 +116,7 @@ app.get('/availability/:userId', async (req, res) => {
         const availability = await Availability.find({userId})
         res.json(availability)
     }catch (err){
-        
+        console.log()
     }
 })
 
