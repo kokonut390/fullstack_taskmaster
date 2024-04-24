@@ -117,6 +117,7 @@ app.get('/availability/:userId', async (req, res) => {
         res.json(availability)
     }catch (err){
         console.error(err)
+        res.status(404)
     }
 })
 
