@@ -117,6 +117,21 @@
         }
     });
 
+    app.post('/availability', async (req, res) => {
+        const { weekNumber, availableSlots } = req.body;
+        try {
+            const newAvailability = new Availability({
+                weekNumber,
+                availableSlots
+            });
+            await newAvailability.save();
+            res.status(201).json(newAvailability);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ message: 'Server error' });
+        }
+    });
+
 
 
     const PORT = process.env.PORT || 3001
