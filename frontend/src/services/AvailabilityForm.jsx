@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import axios from "axios";
 const baseUrl = `https://final-liangyu.onrender.com/availability`
+/*
 const baseUrl = `https://final-liangyu.onrender.com/availability`
+*/
 function getWeekNumber(d) {
     d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
     d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
