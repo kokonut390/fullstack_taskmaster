@@ -34,6 +34,8 @@ function AvailabilityForm (){
             console.error('Error updating availability:', err)
         }
     }
+
+    
     return(
         <>
         <form onSubmit={handleSubmit}>
