@@ -64,6 +64,7 @@ function AvailabilityForm (){
             {slots.map((slot, index) => (
                 <div key={index}>
                     {slot.day} {slot.startTime} - {slot.endTime}
+                    <button onClick={() => deleteSlot(index)}>Delete</button>
                 </div>
             ))}
         </div>
