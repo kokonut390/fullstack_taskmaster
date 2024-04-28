@@ -52,6 +52,9 @@ function AvailabilityForm (){
             <button type="button" onClick={addSlot}>Add Time Slot</button>
             <button type="submit">Submit</button>
         </form>
+        <div>
+            
+        </div>
     )
 }
 
