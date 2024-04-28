@@ -14,6 +14,7 @@ function AvailabilityForm (){
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        const 
         try {
             const response = await axios.post(baseUrl, {
                 weekNumber,
