@@ -8,7 +8,7 @@ const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 
 function AvailabilityForm (){
-    const [slots, setSlots] = useState()
+    const [slots, setSlots] = useState('')
 
     const [day, setDay] = useState('')
     const [startTime, setStartTime] = useState('')
