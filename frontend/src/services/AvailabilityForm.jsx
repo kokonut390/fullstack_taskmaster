@@ -23,7 +23,6 @@ function AvailabilityForm (){
     }
     const handleSubmit = async (event) => {
         event.preventDefault()
-        const slot = {day, startTime, endTime}
 
         try {
             const response = await axios.post(baseUrl, {
