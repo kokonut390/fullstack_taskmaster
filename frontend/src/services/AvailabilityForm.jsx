@@ -49,6 +49,7 @@ function AvailabilityForm (){
                 End Time:
                 <input type="time" value={endTime} onChange={e => setEndTime(e.target.value)}/>
             </label>
+            
             <button type="submit">Submit</button>
         </form>
     )
