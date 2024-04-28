@@ -55,7 +55,7 @@ function AvailabilityForm (){
         <div>
             <h3>Add Time Slots:</h3>
             {slots.map((slot, index) => (
-                <div key={index}
+                <div key={index}>
             ))}
         </div>
     )
