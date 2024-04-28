@@ -37,6 +37,7 @@ function AvailabilityForm (){
     return(
         <form onSubmit={handleSubmit}>
             <h2>Set Availability</h2>
+            <label
             <button type="submit">Submit</button>
         </form>
     )
