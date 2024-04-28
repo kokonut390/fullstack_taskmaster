@@ -54,7 +54,7 @@ function AvailabilityForm (){
             <button type="submit">Submit</button>
         </form>
         <div>
-            <h3>Added Time Slots:</h3>
+            <h3>Availability Time Slots:</h3>
             {slots.map((slot, index) => (
                 <div key={index}>
                     {slot.day} {slot.startTime} - {slot.endTime}
