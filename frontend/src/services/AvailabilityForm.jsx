@@ -29,6 +29,7 @@ function AvailabilityForm (){
                 availableSlots: slots
             })
             console.log('Availability added/updated:', response.data)
+            setSlots()
         }catch (err){
             console.error('Error updating availability:', err)
         }
