@@ -36,7 +36,7 @@ function AvailabilityForm (){
     }
 
     const deleteSlot = (index) => {
-        const updatedSlots = slots
+        const updatedSlots = slots.filter()
     }
     return(
         <>
