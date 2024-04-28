@@ -26,7 +26,7 @@ function AvailabilityForm (){
 
         try {
             const response = await axios.post(baseUrl, {
-                availableSlots:
+                availableSlots: slots
             })
             console.log('Availability added/updated:', response.data)
         }catch (err){
