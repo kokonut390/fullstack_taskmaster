@@ -8,6 +8,8 @@ const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 
 function AvailabilityForm (){
+    const [slots, setSlots] = useState()
+
     const [day, setDay] = useState('')
     const [startTime, setStartTime] = useState('')
     const [endTime, setEndTime] = useState('')
@@ -15,7 +17,7 @@ function AvailabilityForm (){
     const handleSubmit = async (event) => {
         event.preventDefault()
         const slot = {day, startTime, endTime}
-        
+
         try {
             const response = await axios.post(baseUrl, {
                 weekNumber,
