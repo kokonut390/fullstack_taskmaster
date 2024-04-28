@@ -40,7 +40,7 @@ function AvailabilityForm (){
             <h2>Set Availability</h2>
             <label>
                 Day:
-                <input type="text" value={day} onChange={e => setDay(e.target.value)}/>
+                <input type="date" value={day} onChange={e => setDay(e.target.value)}/>
             </label>
             <label>
                 Start Time:
@@ -61,6 +61,7 @@ function AvailabilityForm (){
                 </div>
             ))}
         </div>
+        </>
     )
 }
 
