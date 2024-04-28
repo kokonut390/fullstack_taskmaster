@@ -8,7 +8,7 @@ const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 
 function AvailabilityForm (){
-    const [, set] = useState()
+    const [day, setDay] = useState()
 
     const handleSubmit = async (event) => {
         event.preventDefault()
