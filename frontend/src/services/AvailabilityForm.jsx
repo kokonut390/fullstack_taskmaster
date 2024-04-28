@@ -35,7 +35,9 @@ function AvailabilityForm (){
         }
     }
 
-    const deleteSlot = 
+    const deleteSlot = (index) => {
+        
+    }
     return(
         <>
         <form onSubmit={handleSubmit}>
