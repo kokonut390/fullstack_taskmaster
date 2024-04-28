@@ -39,7 +39,7 @@ function AvailabilityForm (){
             <h2>Set Availability</h2>
             <label>
                 Day:
-                <
+                <input/>
             </label>
             <button type="submit">Submit</button>
         </form>
