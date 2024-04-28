@@ -39,7 +39,7 @@ function AvailabilityForm (){
         const updatedSlots = slots.filter((_, slotIndex) => index != slotIndex)
         setSlots(updatedSlots)
     }
-    
+
     return(
         <>
         <form onSubmit={handleSubmit}>
