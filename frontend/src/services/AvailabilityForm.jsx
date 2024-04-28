@@ -53,7 +53,8 @@ function AvailabilityForm (){
             <button type="submit">Submit</button>
         </form>
         <div>
-            <h3>Add Time Slots</h3>
+            <h3>Add Time Slots:</h3>
+            
         </div>
     )
 }
