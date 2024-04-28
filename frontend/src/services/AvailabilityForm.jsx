@@ -39,7 +39,15 @@ function AvailabilityForm (){
             <h2>Set Availability</h2>
             <label>
                 Day:
-                <input type="text" value={day} onChange={e => setDay(e.target.value)} />
+                <input type="text" value={day} onChange={e => setDay(e.target.value)}/>
+            </label>
+            <label>
+                Start Time:
+                <input type="time" value={startTime} onChange={e => setStartTime(e.target.value)}/>
+            </label>
+            <label>
+                End Time:
+                <input type="time" value={endTime} onChange={e => setEndTime(e.target.value)}/>
             </label>
             <button type="submit">Submit</button>
         </form>
