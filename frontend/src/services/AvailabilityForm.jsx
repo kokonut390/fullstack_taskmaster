@@ -17,6 +17,7 @@ function AvailabilityForm (){
     const addSlot = () => {
         const newSlot = {day, startTime, endTime}
         setSlots([...slots, newSlot])
+        setDay()
     }
     const handleSubmit = async (event) => {
         event.preventDefault()
