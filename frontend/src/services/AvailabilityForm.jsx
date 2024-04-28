@@ -26,8 +26,7 @@ function AvailabilityForm (){
 
         try {
             const response = await axios.post(baseUrl, {
-                weekNumber,
-                availableSlots
+                availableSlots:
             })
             console.log('Availability added/updated:', response.data)
         }catch (err){
