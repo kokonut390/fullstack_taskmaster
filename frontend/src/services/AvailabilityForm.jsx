@@ -38,7 +38,8 @@ function AvailabilityForm (){
         <form onSubmit={handleSubmit}>
             <h2>Set Availability</h2>
             <label>
-                Day
+                Day:
+                <
             </label>
             <button type="submit">Submit</button>
         </form>
