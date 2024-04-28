@@ -14,6 +14,7 @@ function AvailabilityForm (){
     const [startTime, setStartTime] = useState('')
     const [endTime, setEndTime] = useState('')
 
+    const addSlot
     const handleSubmit = async (event) => {
         event.preventDefault()
         const slot = {day, startTime, endTime}
