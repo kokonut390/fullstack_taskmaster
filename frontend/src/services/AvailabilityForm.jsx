@@ -45,31 +45,40 @@ function AvailabilityForm (){
 
     return(
         <>
-        <form onSubmit={handleSubmit}>
-            <h2>Set Availability</h2>
-            <label>
-                Day:
-                <input type="date" value={day} onChange={e => setDay(e.target.value)}/>
-            </label>
-            <label>
-                Start Time:
-                <input type="time" value={startTime} onChange={e => setStartTime(e.target.value)}/>
-            </label>
-            <label>
-                End Time:
-                <input type="time" value={endTime} onChange={e => setEndTime(e.target.value)}/>
-            </label>
-            <button type="button" onClick={addSlot}>Add Time Slot</button>
-            <button type="submit">Submit</button>
-        </form>
-        <div>
-            <h3>Availability Time Slots:</h3>
-            {slots.map((slot, index) => (
-                <div key={index}>
-                    {slot.day} {slot.startTime} - {slot.endTime}
-                    <button onClick={() => deleteSlot(index)}>Delete</button>
-                </div>
-            ))}
+            <form onSubmit={handleSubmit}>
+                <h2>Set Availability</h2>
+                <label>
+                    Name:
+                    <input
+                        type="text"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        placeholder="Enter your name"
+                    />
+                </label>
+                <label>
+                    Day:
+                    <input type="date" value={day} onChange={e => setDay(e.target.value)}/>
+                </label>
+                <label>
+                    Start Time:
+                    <input type="time" value={startTime} onChange={e => setStartTime(e.target.value)}/>
+                </label>
+                <label>
+                    End Time:
+                    <input type="time" value={endTime} onChange={e => setEndTime(e.target.value)}/>
+                </label>
+                <button type="button" onClick={addSlot}>Add Time Slot</button>
+                <button type="submit">Submit</button>
+            </form>
+            <div>
+                <h3>Availability Time Slots:</h3>
+                {slots.map((slot, index) => (
+                    <div key={index}>
+                        {slot.day} {slot.startTime} - {slot.endTime}
+                        <button onClick={() => deleteSlot(index)}>Delete</button>
+                    </div>
+                ))}
         </div>
         </>
     )
