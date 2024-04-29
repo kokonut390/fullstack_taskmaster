@@ -37,7 +37,6 @@ function App() {
             </nav>
             <Switch>
                 <Route path="/schedules">
-                    {/* 如果 ScheduleForm 和 ScheduleList 应显示在同一个页面 */}
                     <ScheduleForm />
                     <ScheduleList />
                 </Route>
