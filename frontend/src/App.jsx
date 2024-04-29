@@ -30,15 +30,22 @@ function App() {
     }, []);
 
     return (
-        <div>
-            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10px'}}>
-                {darkMode ? 'Light Mode' : 'Dark Mode'}
-            </button>
-            <h1>Schedule Manager</h1>
-            <ScheduleForm fetchSchedules={fetchSchedules}/>
-            <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
-            <AvailabilityForm />
-        </div>
+        <Router>
+            <nav>
+                <Link to="/schedules">Schedules</Link>
+                <Link to="/availability">Set Availability</Link>
+            </nav>
+            <Switch>
+                <Route path="/schedules">
+                    {/* 如果 ScheduleForm 和 ScheduleList 应显示在同一个页面 */}
+                    <ScheduleForm />
+                    <ScheduleList />
+                </Route>
+                <Route path="/availability">
+                    <AvailabilityForm />
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
