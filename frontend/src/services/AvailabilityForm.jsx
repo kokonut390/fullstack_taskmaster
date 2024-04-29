@@ -33,7 +33,7 @@ function AvailabilityForm (){
             })
             console.log('Availability added/updated:', response.data)
             setSlots([])
-            setName()
+            setName('')
         }catch (err){
             console.error('Error updating availability:', err)
         }
