@@ -28,6 +28,7 @@ function AvailabilityForm (){
 
         try {
             const response = await axios.post(baseUrl, {
+                name,
                 availableSlots: slots
             })
             console.log('Availability added/updated:', response.data)
