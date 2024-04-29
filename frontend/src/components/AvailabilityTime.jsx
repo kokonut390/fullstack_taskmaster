@@ -5,6 +5,8 @@ const AvailabilityList = () => {
     const [availability, setAvailability] = useState([])
 
     useEffect(() => {
-        const fetchAvailability = async 
+        const fetchAvailability = async () => {
+            
+        }
     }, []);
 }
