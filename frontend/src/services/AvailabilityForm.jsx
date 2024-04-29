@@ -48,17 +48,16 @@ function AvailabilityForm (){
             <form onSubmit={handleSubmit}>
                 <h2>Set Availability</h2>
                 <div>
-                    
+                    <label>
+                        Name:
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            placeholder="Enter your name"
+                        />
+                    </label>
                 </div>
-                <label>
-                    Name:
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
-                        placeholder="Enter your name"
-                    />
-                </label>
                 <label>
                     Day:
                     <input type="date" value={day} onChange={e => setDay(e.target.value)}/>
