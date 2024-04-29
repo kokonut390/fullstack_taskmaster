@@ -3,5 +3,8 @@ import axios from "axios";
 
 const AvailabilityList = () => {
     const [availability, setAvailability] = useState([])
-    
+
+    useEffect(() => {
+        
+    }, []);
 }
