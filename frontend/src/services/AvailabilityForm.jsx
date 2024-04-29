@@ -59,6 +59,9 @@ function AvailabilityForm (){
                         />
                     </label>
                 </div>
+                <div>
+                    
+                </div>
                 <label>
                     Day:
                     <input type="date" value={day} onChange={e => setDay(e.target.value)}/>
