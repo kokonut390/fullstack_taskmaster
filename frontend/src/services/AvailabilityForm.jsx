@@ -82,7 +82,7 @@ function AvailabilityForm (){
                         <button onClick={() => deleteSlot(index)}>Delete</button>
                     </div>
                 ))}
-        </div>
+            </div>
         </>
     )
 }
