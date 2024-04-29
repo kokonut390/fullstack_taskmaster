@@ -7,7 +7,7 @@ const AvailabilityList = () => {
     useEffect(() => {
         const fetchAvailability = async () => {
             try {
-                
+                const res
             }
         }
     }, []);
