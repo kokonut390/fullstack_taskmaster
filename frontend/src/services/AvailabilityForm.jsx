@@ -56,7 +56,9 @@ function AvailabilityForm (){
             console.log('Availability added/updated:', response.data)
             setSubmittedSlots([...submittedSlots, ...slots])
             setSlots([])
-        }catch (err)
+        }catch (err){
+            
+        }
     }
 
     return(
