@@ -63,7 +63,8 @@ function AvailabilityForm (){
                         overlaps.push({
                             names: [slots[i].name, slots[j].name],
                             day: slots[i].day,
-                            startTime: overlapStart
+                            startTime: overlapStart,
+                            
                         })
                     }
                 }
