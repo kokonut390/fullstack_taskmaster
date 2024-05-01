@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import ScheduleList from './services/ScheduleList.jsx'
 import ScheduleForm from './services/ScheduleForm.jsx'
 import AvailabilityForm from './services/AvailabilityForm.jsx'
-const baseUrl = `https://final-liangyu.onrender.com/schedule`
+const baseUrl = `https://final-liangyu.onrender.com`
 import axios from "axios";
 import './index.css'
 
@@ -18,7 +18,7 @@ function App() {
 
     const fetchSchedules = async () => {
         try {
-            const response = await axios.get(baseUrl);
+            const response = await axios.get(baseUrl/schedule);
             setSchedules(response.data);
         } catch (error) {
             console.error('Error fetching data: ', error);
