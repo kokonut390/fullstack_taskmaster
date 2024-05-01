@@ -110,6 +110,7 @@
     app.get('/availability', async (req, res) => {
         try {
             const availability = await Availability.find({});
+            console.log()
             res.json(availability);
         } catch (err) {
             console.error(err);
