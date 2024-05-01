@@ -32,7 +32,9 @@ function App() {
         fetchSchedules();
     }, []);
 
-    const fetchAvailability = async 
+    const fetchAvailability = async () => {
+        
+    }
 
     return (
         <div>
