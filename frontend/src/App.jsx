@@ -8,7 +8,7 @@ import './index.css'
 
 function App() {
     const [availability, setAvailability] = useState([])
-    const [submittedSlots, setSubmittedSlots] = useState()
+    const [submittedSlots, setSubmittedSlots] = useState([])
     const [schedules, setSchedules] = useState([]);
     const [darkMode, setDarkMode] = useState(false)
 
