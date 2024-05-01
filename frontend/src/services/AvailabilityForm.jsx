@@ -49,7 +49,9 @@ function AvailabilityForm (){
     const handleSubmit = async (event) =>{
         event.defaultPrevented()
         try {
-            const response = await axios.post(baseUrl)
+            const response = await axios.post(baseUrl, {
+                
+            })
         }
     }
 
