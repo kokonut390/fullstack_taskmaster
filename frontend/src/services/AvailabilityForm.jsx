@@ -24,7 +24,7 @@ function AvailabilityForm ({initialSlots = []}){
 
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
-        setSlots([...slots, newSlot])
+        setSlots(prevSlots => [...prevSlots, newSlot])
         setDay('')
         setStartTime('')
         setEndTime('')
