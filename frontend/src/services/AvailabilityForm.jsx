@@ -91,7 +91,7 @@ function AvailabilityForm (){
             </div>
             <button type="button" onClick={addSlot}>Add Time Slot</button>
             <div>
-                <h3>Availability Time Slots:</h3>
+                <h3>Current Time Slots:</h3>
                 {slots.map((slot, index) => (
                     <div key={index}>
                         {slot.name} - {slot.day} {slot.startTime} - {slot.endTime}
