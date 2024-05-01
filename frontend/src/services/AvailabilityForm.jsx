@@ -16,7 +16,7 @@ function AvailabilityForm ({initialSlots = []}){
     const [endTime, setEndTime] = useState('')
 
     useEffect(() => {
-        if (initialSlots)
+        if (initialSlots.length)
     }, [initialSlots]);
 
     const addSlot = () => {
