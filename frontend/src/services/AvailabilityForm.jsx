@@ -54,7 +54,7 @@ function AvailabilityForm (){
                 availableSlots: slots
             })
             console.log('Availability added/updated:', response.data)
-            setSubmittedSlots()
+            setSubmittedSlots([...])
         }
     }
 
