@@ -27,21 +27,22 @@ function App() {
             console.error('Error fetching data: ', error);
         }
     };
+    const fetchAvailability = async () => {
+        try {
+            const response = await axios.get(`${baseUrl}/availability`)
+            console.log(response.data)
+            setAvailability(response.data)
+        }catch (err){
+            console.error('Error fetching availability:', err)
+        }
+    }
 
     useEffect(() => {
         fetchSchedules();
     }, []);
 
     useEffect(() => {
-        const fetchAvailability = async () => {
-            try {
-                const response = await axios.get(`${baseUrl}/availability`)
-                console.log(response.data)
-                setAvailability(response.data)
-            }catch (err){
-                console.error('Error fetching availability:', err)
-            }
-        }
+
         fetchAvailability()
     }, []);
 
