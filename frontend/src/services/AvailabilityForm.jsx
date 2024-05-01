@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 const baseUrl = `https://final-liangyu.onrender.com/availability`
 /*
@@ -17,6 +17,10 @@ function AvailabilityForm ({initialSlots = []}){
     const [day, setDay] = useState('')
     const [startTime, setStartTime] = useState('')
     const [endTime, setEndTime] = useState('')
+
+    useEffect(() => {
+        
+    }, []);
 
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
