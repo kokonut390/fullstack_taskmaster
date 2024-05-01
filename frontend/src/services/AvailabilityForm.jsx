@@ -51,7 +51,7 @@ function AvailabilityForm (){
         try {
             const response = await axios.post(baseUrl, {
                 name,
-                availableSlots: 
+                availableSlots: slots
             })
         }
     }
