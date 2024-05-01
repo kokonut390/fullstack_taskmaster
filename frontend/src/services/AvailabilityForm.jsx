@@ -53,7 +53,7 @@ function AvailabilityForm (){
                 name,
                 availableSlots: slots
             })
-            
+            console.log()
         }
     }
 
