@@ -26,7 +26,7 @@
     const availabilitySchema = new mongoose.Schema({
         name: String,
         availableSlots: [{
-            day: Number,
+            day: String,
             startTime: String,
             endTime: String
         }]
