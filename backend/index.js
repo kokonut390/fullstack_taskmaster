@@ -24,7 +24,7 @@
     const Schedule = mongoose.model('Schedule', scheduleSchema);
 
     const availabilitySchema = new mongoose.Schema({
-        weekNumber: Number,
+        name: String,
         availableSlots: [{
             dayOfWeek: Number,
             startTime: String,
