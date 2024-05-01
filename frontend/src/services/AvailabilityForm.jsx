@@ -70,7 +70,7 @@ function AvailabilityForm (){
                 }
             }
         }
-
+        return overlaps
     }
 
     return(
