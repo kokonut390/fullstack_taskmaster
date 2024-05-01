@@ -34,7 +34,8 @@ function App() {
 
     const fetchAvailability = async () => {
         try {
-            
+            const response = await axios.get(baseUrl)
+            setAvailability(response.data)
         }
     }
 
