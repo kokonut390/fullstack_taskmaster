@@ -57,7 +57,9 @@ function AvailabilityForm (){
                     const start2 = new Date(`01/01/2020 ${slots[j].startTime}`)
                     const end2 = new Date(`01/01/2020 ${slots[j].endTime}`)
 
-                    if (start1 < end2 && start2 < end1)
+                    if (start1 < end2 && start2 < end1 ){
+                        
+                    }
                 }
             }
         }
