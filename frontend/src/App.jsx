@@ -15,6 +15,7 @@ function App() {
     useEffect(() => {
         document.body.className = darkMode ? 'dark-mode' : 'light-mode';
     }, [darkMode]);
+
     const fetchSchedules = async () => {
         try {
             const response = await axios.get(baseUrl);
