@@ -30,7 +30,9 @@ function App() {
     }, []);
 
     useEffect(() => {
-        const 
+        const fetchAvailability = () => {
+            
+        }
     }, []);
 
     return (
