@@ -50,6 +50,7 @@ function AvailabilityForm (){
         event.defaultPrevented()
         try {
             const response = await axios.post(baseUrl, {
+                name,
                 
             })
         }
