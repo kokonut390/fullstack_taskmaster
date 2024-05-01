@@ -62,7 +62,8 @@ function AvailabilityForm (){
                         const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString()
                         overlaps.push({
                             names: [slots[i].name, slots[j].name],
-                            day: slots[i].day
+                            day: slots[i].day,
+                            
                         })
                     }
                 }
