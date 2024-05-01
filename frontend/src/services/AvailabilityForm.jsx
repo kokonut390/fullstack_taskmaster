@@ -64,7 +64,7 @@ function AvailabilityForm (){
                             names: [slots[i].name, slots[j].name],
                             day: slots[i].day,
                             startTime: overlapStart,
-                            
+                            endTime: overlapEnd
                         })
                     }
                 }
