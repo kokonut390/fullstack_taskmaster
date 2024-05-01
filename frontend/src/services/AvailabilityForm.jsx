@@ -45,6 +45,8 @@ function AvailabilityForm (){
         setSlots(updatedSlots)
     }
 
+    const hand
+
     return(
         <>
             <h2>Set Availability</h2>
