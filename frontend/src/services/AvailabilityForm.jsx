@@ -60,7 +60,7 @@ function AvailabilityForm (){
                     if (start1 < end2 && start2 < end1 ){
                         const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString()
                         const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString()
-                        
+                        overlaps.push()
                     }
                 }
             }
