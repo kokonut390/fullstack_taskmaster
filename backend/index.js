@@ -118,7 +118,7 @@
     });
 
     app.post('/availability', async (req, res) => {
-        const { weekNumber, availableSlots } = req.body;
+        const { name, availableSlots } = req.body;
         try {
             const newAvailability = new Availability({
                 weekNumber,
