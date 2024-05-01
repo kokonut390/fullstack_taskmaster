@@ -53,7 +53,8 @@ function AvailabilityForm (){
                 name,
                 availableSlots: slots
             })
-            console.log()
+            console.log('Availability added/updated:', response.data)
+            
         }
     }
 
