@@ -68,11 +68,21 @@ function AvailabilityForm (){
                 </label>
                 <label>
                     Start Time:
-                    <input type="time" value={startTime} onChange={e => setStartTime(e.target.value)} step="300"/>
+                    <TimePicker
+                        onChange={setStartTime}
+                        value={startTime}
+                        clockIcon={null} // Remove the clock icon
+                        minuteStep={5} // Set minute step to 5
+                    />
                 </label>
                 <label>
                     End Time:
-                    <input type="time" value={endTime} onChange={e => setEndTime(e.target.value)} step="300"/>
+                    <TimePicker
+                        onChange={setEndTime}
+                        value={endTime}
+                        clockIcon={null} // Remove the clock icon
+                        minuteStep={5} // Set minute step to 5
+                    />
                 </label>
             </div>
             <button type="button" onClick={addSlot}>Add Time Slot</button>
