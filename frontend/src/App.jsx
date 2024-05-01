@@ -37,7 +37,7 @@ function App() {
             const response = await axios.get(baseUrl)
             setAvailability(response.data)
         } catch (err){
-            
+            console.error('Error fetching availability:',err)
         }
     }
 
