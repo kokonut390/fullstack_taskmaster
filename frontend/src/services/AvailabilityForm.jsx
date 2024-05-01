@@ -57,7 +57,7 @@ function AvailabilityForm (){
             setSubmittedSlots([...submittedSlots, ...slots])
             setSlots([])
         }catch (err){
-            
+            console.error()
         }
     }
 
