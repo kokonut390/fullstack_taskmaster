@@ -25,21 +25,7 @@ function AvailabilityForm (){
         setStartTime('')
         setEndTime('')
     }
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-
-        try {
-            const response = await axios.post(baseUrl, {
-                name,
-                availableSlots: slots
-            })
-            console.log('Availability added/updated:', response.data)
-            setSlots([])
-            setName('')
-        }catch (err){
-            console.error('Error updating availability:', err)
-        }
-    }
+    
 
     const deleteSlot = (index) => {
         const updatedSlots = slots.filter((_, slotIndex) => index != slotIndex)
