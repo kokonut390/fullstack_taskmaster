@@ -17,7 +17,7 @@ function AvailabilityForm ({initialSlots = []}){
 
     useEffect(() => {
         if (initialSlots.length > 0) {
-            
+            setSubmittedSlots()
         }
     }, [initialSlots]);
 
