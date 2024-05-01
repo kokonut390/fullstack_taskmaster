@@ -7,7 +7,7 @@ import axios from "axios";
 import './index.css'
 
 function App() {
-    const [, set] = useState()
+    const [availability, setAvailability] = useState([])
     const [schedules, setSchedules] = useState([]);
     const [darkMode, setDarkMode] = useState(false)
 
