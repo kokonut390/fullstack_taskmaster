@@ -43,7 +43,6 @@ function AvailabilityForm ({initialSlots = []}){
                 availableSlots: slots
             })
             console.log('Availability added/updated:', response.data)
-            const newSubmissions = [...submittedSlots, ...slots]
             setSubmittedSlots(newSubmissions)
             setOverlaps(findOverlappingSlots(newSubmissions))
             setSlots([])
