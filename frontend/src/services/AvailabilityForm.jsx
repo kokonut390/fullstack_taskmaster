@@ -53,6 +53,7 @@ function AvailabilityForm (){
             for (let j = i + 1; j < slots.length; j++){
                 if(slots[i].day === slots[j].day){ //make sure it's the same day
                     const start1 = new Date(`01/01/2020 ${slots[i].startTime}`)
+                    const 
                 }
             }
         }
