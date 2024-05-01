@@ -7,52 +7,47 @@ import axios from "axios";
 import './index.css'
 
 function App() {
-    const [availability, setAvailability] = useState([])
-    const [submittedSlots, setSubmittedSlots] = useState([])
+    const [availability, setAvailability] = useState([]);
     const [schedules, setSchedules] = useState([]);
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(false);
 
-
-    const toggleDarkMode = () => setDarkMode(!darkMode)
     useEffect(() => {
         document.body.className = darkMode ? 'dark-mode' : 'light-mode';
     }, [darkMode]);
 
-    const fetchSchedules = async () => {
-        try {
-            const response = await axios.get(`${baseUrl}/schedule`);
-            setSchedules(response.data);
-        } catch (error) {
-            console.error('Error fetching data: ', error);
-        }
-    };
-
     useEffect(() => {
+        const fetchSchedules = async () => {
+            try {
+                const response = await axios.get(`${baseUrl}/schedule`);
+                setSchedules(response.data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
         fetchSchedules();
     }, []);
 
     useEffect(() => {
         const fetchAvailability = async () => {
             try {
-                const response = await axios.get(`${baseUrl}/availability`)
-                console.log(response.data)
-                setAvailability(response.data)
-            }catch (err){
-                console.error('Error fetching availability:', err)
+                const response = await axios.get(`${baseUrl}/availability`);
+                setAvailability(response.data);
+            } catch (error) {
+                console.error('Error fetching availability:', error);
             }
-        }
-        fetchAvailability()
+        };
+        fetchAvailability();
     }, []);
 
     return (
         <div>
-            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10px'}}>
+            <button onClick={() => setDarkMode(!darkMode)} style={{ position: 'fixed', top: '10px', right: '10px' }}>
                 {darkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
             <h1>Schedule Manager</h1>
-            <ScheduleForm fetchSchedules={fetchSchedules}/>
-            <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
-            <AvailabilityForm initialSlots={submittedSlots}/>
+            <ScheduleForm fetchSchedules={fetchSchedules} />
+            <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules} />
+            <AvailabilityForm initialSlots={availability} />
         </div>
     );
 }
