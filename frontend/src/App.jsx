@@ -38,6 +38,7 @@ function App() {
                 console.error('Error fetching availability:', err)
             }
         }
+        
     }, []);
 
     return (
