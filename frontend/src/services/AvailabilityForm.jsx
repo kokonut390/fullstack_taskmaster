@@ -41,7 +41,7 @@ function AvailabilityForm (){
             })
             console.log('Availability added/updated:', response.data)
             const newSubmissions = [...submittedSlots, ...slots]
-            setSubmittedSlots([...submittedSlots, ...slots])
+            setSubmittedSlots(newSubmissions)
             setSlots([])
         }catch (err){
             console.error('Error updating availability:', err)
