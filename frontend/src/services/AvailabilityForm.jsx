@@ -100,6 +100,7 @@ function AvailabilityForm (){
                 ))}
             </div>
             <button type="submit" onClick={handleSubmit}>Submit All Time Slots</button>
+            
         </>
     )
 }
