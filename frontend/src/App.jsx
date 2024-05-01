@@ -32,7 +32,7 @@ function App() {
     useEffect(() => {
         const fetchAvailability = () => {
             try {
-                const response = aw
+                const response = 
             }
         }
     }, []);
