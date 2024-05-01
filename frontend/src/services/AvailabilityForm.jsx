@@ -1,9 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 const baseUrl = `https://final-liangyu.onrender.com/availability`
-/*
-const baseUrl = `https://final-liangyu.onrender.com/availability`
-*/
 
 
 
