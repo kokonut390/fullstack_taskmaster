@@ -109,7 +109,7 @@ function AvailabilityForm ({initialSlots = []}){
                 <h3>Current Time Slots:</h3>
                 {slots.map((slot, index) => (
                     <div key={index}>
-                        {slot.name} - {slot.day} {slot.startTime} - {slot.endTime}
+                        {slot.name} - {slot.day} from {slot.startTime} to {slot.endTime}
                         <button onClick={() => deleteSlot(index)}>Delete</button>
                     </div>
                 ))}
