@@ -28,6 +28,15 @@ function App() {
         }
     };
 
+    const fetchAvailability = async () => {
+        try {
+            const response = await axios.get(`${baseUrl}/availability`);
+            setAvailability(response.data);
+        } catch (error) {
+            console.error('Error fetching availability:', error);
+        }
+    };
+
     useEffect(() => {
         fetchSchedules();
     }, []);
