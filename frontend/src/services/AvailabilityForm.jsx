@@ -46,7 +46,7 @@ function AvailabilityForm (){
     }
 
     const handleSubmit = async (event) =>{
-        event.defaultPrevented
+        event.defaultPrevented()
     }
 
     return(
