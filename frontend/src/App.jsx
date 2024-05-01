@@ -29,7 +29,9 @@ function App() {
         fetchSchedules();
     }, []);
 
-    
+    useEffect(() => {
+        
+    }, []);
 
     return (
         <div>
