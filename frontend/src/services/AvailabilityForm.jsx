@@ -107,10 +107,13 @@ function AvailabilityForm ({initialSlots = []}){
             <button type="button" onClick={addSlot}>Add Time Slot</button>
             <div>
                 <h3>Current Time Slots:</h3>
-                {slots.map((slot, index) => (
+                {availability.map((item, index) => (
                     <div key={index}>
-                        {slot.name} - {slot.day} from {slot.startTime} to {slot.endTime}
-                        <button onClick={() => deleteSlot(index)}>Delete</button>
+                        {item.name} - Available Slots: {item.availableSlots.map((slot, idx) => (
+                        <div key={idx}>
+                            {slot.day} from {slot.startTime} to {slot.endTime}
+                        </div>
+                    ))}
                     </div>
                 ))}
             </div>
