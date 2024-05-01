@@ -33,7 +33,9 @@ function App() {
     }, []);
 
     const fetchAvailability = async () => {
-        
+        try {
+            
+        }
     }
 
     return (
