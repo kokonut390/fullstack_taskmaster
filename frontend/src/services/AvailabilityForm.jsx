@@ -52,7 +52,7 @@ function AvailabilityForm (){
         for (let i = 0; i < slots.length; i++ ){
             for (let j = i + 1; j < slots.length; j++){
                 if(slots[i].day === slots[j].day){ //make sure it's the same day
-                    const start1 = 
+                    const start1 = new 
                 }
             }
         }
