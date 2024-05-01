@@ -53,6 +53,7 @@ function AvailabilityForm (){
                 name,
                 availableSlots: slots
             })
+            
         }
     }
 
