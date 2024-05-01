@@ -121,7 +121,7 @@
         const { name, availableSlots } = req.body;
         try {
             const newAvailability = new Availability({
-                weekNumber,
+                name,
                 availableSlots
             });
             await newAvailability.save();
