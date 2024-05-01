@@ -51,7 +51,7 @@ function AvailabilityForm (){
         let overlaps = []
         for (let i = 0; i < slots.length; i++ ){
             for (let j = i + 1; j < slots.length; j++){
-                if(slots)
+                if(slots[i])
             }
         }
 
