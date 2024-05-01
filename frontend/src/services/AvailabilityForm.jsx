@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
-import * as tty from "tty";
+
 const baseUrl = `https://final-liangyu.onrender.com/availability`
 /*
 const baseUrl = `https://final-liangyu.onrender.com/availability`
