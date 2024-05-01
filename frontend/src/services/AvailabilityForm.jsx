@@ -15,7 +15,7 @@ function AvailabilityForm (){
     const [slots, setSlots] = useState([])
 
     const [day, setDay] = useState('')
-    const [startTime, setStartTime] = useState('')
+    const [startTime, setStartTime] = useState('10:00')
     const [endTime, setEndTime] = useState('')
 
     const addSlot = () => {
