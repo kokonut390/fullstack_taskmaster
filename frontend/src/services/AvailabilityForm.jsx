@@ -25,7 +25,7 @@ function AvailabilityForm (){
         setStartTime('')
         setEndTime('')
     }
-    
+
 
     const deleteSlot = (index) => {
         const updatedSlots = slots.filter((_, slotIndex) => index != slotIndex)
