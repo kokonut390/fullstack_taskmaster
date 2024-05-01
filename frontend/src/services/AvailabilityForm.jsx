@@ -32,8 +32,7 @@ function AvailabilityForm ({initialSlots = []}){
 
 
     const deleteSlot = (index) => {
-        const updatedSlots = slots.filter((_, slotIndex) => index != slotIndex)
-        setSlots(updatedSlots)
+        setSlots(prevSlots => prevSlots.filter((_, idx) => idx !== index))
     }
 
     const handleSubmit = async (event) =>{
