@@ -30,7 +30,7 @@ function App() {
     }, []);
 
     useEffect(() => {
-        const fetchAvailability = () => {
+        const fetchAvailability = async () => {
             try {
                 const response = await axios.get(`${baseUrl}/availability`)
                 console.log(response.data)
