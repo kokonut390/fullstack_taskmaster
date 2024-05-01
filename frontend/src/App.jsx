@@ -30,17 +30,18 @@ function App() {
     useEffect(() => {
         fetchSchedules();
     }, []);
+    const fetchAvailability = async () => {
+        try {
+            const response = await axios.get(`${baseUrl}/availability`)
+            console.log(response.data)
+            setAvailability(response.data)
+        }catch (err){
+            console.error('Error fetching availability:', err)
+        }
+    }
 
     useEffect(() => {
-        const fetchAvailability = async () => {
-            try {
-                const response = await axios.get(`${baseUrl}/availability`)
-                console.log(response.data)
-                setAvailability(response.data)
-            }catch (err){
-                console.error('Error fetching availability:', err)
-            }
-        }
+
         fetchAvailability()
     }, []);
 
