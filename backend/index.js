@@ -110,7 +110,7 @@
     app.get('/availability', async (req, res) => {
         try {
             const availability = await Availability.find({});
-            console.log()
+            console.log("Sending availability data:", availability)
             res.json(availability);
         } catch (err) {
             console.error(err);
