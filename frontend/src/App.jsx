@@ -33,6 +33,7 @@ function App() {
         const fetchAvailability = () => {
             try {
                 const response = await axios.get(`${baseUrl}/availability`)
+                console.log()
             }
         }
     }, []);
