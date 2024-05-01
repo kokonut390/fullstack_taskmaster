@@ -32,18 +32,7 @@ function App() {
         fetchSchedules();
     }, []);
 
-    useEffect(() => {
-        const fetchAvailability = async () => {
-            try {
-                const response = await axios.get(`${baseUrl}/availability`)
-                console.log(response.data)
-                setAvailability(response.data)
-            }catch (err){
-                console.error('Error fetching availability:', err)
-            }
-        }
-        fetchAvailability()
-    }, []);
+    const 
 
     return (
         <div>
