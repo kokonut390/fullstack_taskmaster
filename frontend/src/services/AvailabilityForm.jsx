@@ -9,6 +9,7 @@ const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 function AvailabilityForm (){
     const [submittedSlots, setSubmittedSlots] = useState([])
+    const [overlap, setOverlap] = useState()
 
     const [name, setName] = useState('')
     const [slots, setSlots] = useState([])
@@ -47,7 +48,7 @@ function AvailabilityForm (){
     }
 
     const findOverlappingSlots = (slots) => {
-        
+
     }
 
     return(
