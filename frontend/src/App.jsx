@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react'
-import ScheduleList from './services/ScheduleList.jsx'
-import ScheduleForm from './services/ScheduleForm.jsx'
-import AvailabilityForm from './services/AvailabilityForm.jsx'
-const baseUrl = `https://final-liangyu.onrender.com`
+import { useState, useEffect } from 'react';
+import ScheduleList from './services/ScheduleList.jsx';
+import ScheduleForm from './services/ScheduleForm.jsx';
+import AvailabilityForm from './services/AvailabilityForm.jsx';
+const baseUrl = `https://final-liangyu.onrender.com`;
 
 import axios from "axios";
-import './index.css'
+import './index.css';
 
 function App() {
-    const [availability, setAvailability] = useState([])
-    const [submittedSlots, setSubmittedSlots] = useState([])
+    const [availability, setAvailability] = useState([]);
+    const [submittedSlots, setSubmittedSlots] = useState([]);
     const [schedules, setSchedules] = useState([]);
-    const [darkMode, setDarkMode] = useState(false)
+    const [darkMode, setDarkMode] = useState(false);
 
-
-    const toggleDarkMode = () => setDarkMode(!darkMode)
+    const toggleDarkMode = () => setDarkMode(!darkMode);
     useEffect(() => {
         document.body.className = darkMode ? 'dark-mode' : 'light-mode';
     }, [darkMode]);
@@ -27,19 +26,19 @@ function App() {
             console.error('Error fetching data: ', error);
         }
     };
+
     const fetchAvailability = async () => {
         try {
-            const response = await axios.get(`${baseUrl}/availability`)
-            console.log(response.data)
-            setAvailability(response.data)
-        }catch (err){
-            console.error('Error fetching availability:', err)
+            const response = await axios.get(`${baseUrl}/availability`);
+            setAvailability(response.data);
+        } catch (error) {
+            console.error('Error fetching availability:', error);
         }
-    }
+    };
 
     useEffect(() => {
         fetchSchedules();
-        fetchAvailability()
+        fetchAvailability();
     }, []);
 
     return (
@@ -51,8 +50,21 @@ function App() {
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
             <AvailabilityForm initialSlots={submittedSlots}/>
+            <div>
+                <h2>Available Time Slots</h2>
+                {availability.map((avail, index) => (
+                    <div key={index}>
+                        <h3>{avail.name}</h3>
+                        {avail.availableSlots.map((slot, idx) => (
+                            <div key={idx}>
+                                {slot.day} - From {slot.startTime} to {slot.endTime}
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
 
-export default App
+export default App;
