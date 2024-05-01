@@ -35,7 +35,7 @@ function App() {
                 const response = await axios.get(`${baseUrl}/availability`)
                 console.log(response.data)
             }catch (err){
-                
+                console.error()
             }
         }
     }, []);
