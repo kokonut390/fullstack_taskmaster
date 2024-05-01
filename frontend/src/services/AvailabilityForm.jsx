@@ -20,7 +20,7 @@ function AvailabilityForm ({initialSlots = []}){
 
     useEffect(() => {
         setSubmittedSlots(initialSlots)
-    }, []);
+    }, [initialSlots]);
 
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
