@@ -49,7 +49,9 @@ function AvailabilityForm (){
 
     const findOverlappingSlots = (slots) => {
         let overlaps = []
-        for (let i = 0; i < slots.length; i++ )
+        for (let i = 0; i < slots.length; i++ ){
+            for ()
+        }
 
     }
 
