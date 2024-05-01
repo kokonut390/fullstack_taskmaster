@@ -45,7 +45,7 @@ function AvailabilityForm (){
         setSlots(updatedSlots)
     }
 
-    const handleSubmit = async 
+    const handleSubmit = async (event) =>
 
     return(
         <>
