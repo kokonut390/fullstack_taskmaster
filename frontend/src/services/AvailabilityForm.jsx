@@ -46,7 +46,9 @@ function AvailabilityForm (){
         }
     }
 
-    const find
+    const findOverlappingSlots = () => {
+        
+    }
 
     return(
         <>
