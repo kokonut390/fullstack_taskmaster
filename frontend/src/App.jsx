@@ -46,7 +46,7 @@ function App() {
         try {
             const response = await axios.post(`${baseUrl}/availability`, { availableSlot: newSlot })
             if (response.status === 200 ){
-                
+                fetchAvailability()
             }
         }
     }
