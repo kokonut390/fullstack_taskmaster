@@ -52,7 +52,7 @@ function App() {
             setAvailability(groupedData);
 
             const overlaps = findOverlappingSlots(groupedData)
-            setOverlaps(findOverlappingSlots(groupedData))
+            setOverlaps(overlaps)
         } catch (error) {
             console.error('Error fetching availability:', error);
         }
