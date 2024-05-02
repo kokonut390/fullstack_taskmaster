@@ -42,7 +42,7 @@ function App() {
         fetchAvailability();
     }, []);
 
-    const 
+    const handleAddSlot = async 
 
     return (
         <div>
