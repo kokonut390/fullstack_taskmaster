@@ -35,26 +35,29 @@ Start by cloning the repository to your local machine. Open a terminal and run t
 
 ```
 git clone https://github.com/comp227/final-liangyu-final.git
-
+```
+```
 cd final-liangyu-final
 ```
 ## 2. Install Dependencies
 - **Backend**:
 ```
 cd backend
+```
+```
 npm i
 ```
 - **Frontend**:
 ```
 cd frontend
+```
+```
 npm i
 ```
 ## 3. Set Environment Variables
 - Create a `.env` file in the root of your backend directory.
-
+- Example .env content:
 ```
-Example .env content:
-
 DATABASE_URL=mongodb+srv://yourmongodbconnectionstring
 ```
 - Adjust the url code in `index.js` in backend after you created `.env`.
