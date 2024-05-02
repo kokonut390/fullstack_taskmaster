@@ -112,7 +112,7 @@ function App() {
                 ))}
             </div>
             <div>
-                <h3>Overlapping Time Slots:</h3>
+                <h2>Overlapping Time Slots:</h2>
                 {overlaps.map((overlap, index) => (
                     <div key={index}>
                         {overlap.names.join(' & ')} - {overlap.day} {overlap.startTime} - {overlap.endTime}
