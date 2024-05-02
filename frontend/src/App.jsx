@@ -49,6 +49,8 @@ function App() {
             console.log(response.data)
             const groupedData = groupByPersonName(response.data)
             setAvailability(groupedData);
+
+            setOverlaps(findOverlappingSlots(groupedData))
         } catch (error) {
             console.error('Error fetching availability:', error);
         }
