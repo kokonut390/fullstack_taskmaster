@@ -86,7 +86,6 @@ function App() {
             }
         }
         return overlaps;
-        console.log(overlaps)
     }
 
     return (
