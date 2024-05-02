@@ -95,7 +95,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         return overlaps
     }
 
-    const 
+    const handleNameChange =
 
     return(
         <>
