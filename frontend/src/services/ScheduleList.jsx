@@ -18,6 +18,7 @@ function ScheduleList({ schedules, fetchSchedules}) {
                 console.error('Error deleting schedules:', error)
             }
         }
+        
     }
     return (
         <div>
