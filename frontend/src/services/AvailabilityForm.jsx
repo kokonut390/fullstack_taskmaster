@@ -99,7 +99,8 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         const inputName = event.target.value
         const formattedName = inputName
             .toLowerCase()
-            .split()
+            .split(' ')
+            .
     }
 
     return(
