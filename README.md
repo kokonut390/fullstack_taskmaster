@@ -28,3 +28,7 @@
 ## How to download run the project
 Directly open the project through Render link: https://final-liangyu.onrender.com/
 
+Follow these steps to get the project up and running on your local machine:
+
+## 1. Clone the Repository
+Start by cloning the repository to your local machine. Open a terminal and run the following command:
