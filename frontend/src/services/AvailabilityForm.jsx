@@ -115,16 +115,7 @@ function AvailabilityForm ({initialSlots = []}){
                     </div>
                 ))}
             </div>
-            <button type="submit" onClick={handleSubmit}>Submit All Time Slots</button>/*
-            <div>
-                <h3>Submitted Availability Time Slots:</h3>
-                {submittedSlots.map((slot, index) => (
-                    <div key={index}>
-                        {slot.name} - {slot.day} {slot.startTime} - {slot.endTime}
-                    </div>
-                ))}
-            </div>
-            */
+            <button type="submit" onClick={handleSubmit}>Submit All Time Slots</button>
             <div>
                 <h3>Overlapping Time Slots:</h3>
                 {overlaps.map((overlap, index) => (
