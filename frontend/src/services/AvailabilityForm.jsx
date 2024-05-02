@@ -82,7 +82,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
             allSlots = [...allSlots, ...slots];
         });
         let overlaps = [];
-        // 现在 allSlots 包含了所有的时间槽
         for (let i = 0; i < allSlots.length; i++) {
             for (let j = i + 1; j < allSlots.length; j++) {
                 if (allSlots[i].day === allSlots[j].day && allSlots[i].name !== allSlots[j].name) {
