@@ -62,7 +62,8 @@ function App() {
     }, []);
 
     const findOverlappingSlots = (availabilityData) => {
-        let  overlaps = 0
+        let  overlaps = []
+        
     }
 
     return (
