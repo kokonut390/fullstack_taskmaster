@@ -78,7 +78,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
 
     const findOverlappingSlots = (availability) => {
         let allSlots = [];
-        // 这里加个检查，确保 availability 是有效的
         if (availability && typeof availability === 'object') {
             Object.values(availability).forEach(slots => {
                 allSlots = allSlots.concat(slots);
