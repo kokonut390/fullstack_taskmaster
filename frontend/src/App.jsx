@@ -55,7 +55,7 @@ function App() {
 
     useEffect(() => {
         fetchSchedules();
-        fetchAvailability();
+        fetchAvailability().then();
     }, []);
 
     return (
