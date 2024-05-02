@@ -71,8 +71,8 @@ function App() {
                 <h2>Available Time Slots</h2>
                 {Object.entries(availability).map(([name, slots], index) => (
                     <div key={index}>
-                        <h3>{name}</h3>
-                        {Array.isArray(slots) ? slots.map((slot, idx) => (
+                        <h3>{name || "Unnamed"}</h3>
+                        {Array.isArray(slots) && slots.length > 0 ? slots.map((slot, idx) => (
                             <div key={idx}>
                                 {slot.day} - From {slot.startTime} to {slot.endTime}
                             </div>
