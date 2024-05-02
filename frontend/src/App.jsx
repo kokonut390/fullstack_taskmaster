@@ -48,7 +48,8 @@ function App() {
             if (response.status === 200 ){
                 fetchAvailability()
             }
-        }
+        }catch (err)
+            
     }
 
     return (
