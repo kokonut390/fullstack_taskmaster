@@ -63,6 +63,7 @@ function App() {
                     </div>
                 ))}
             </div>
+            <AvailabilityForm initialSlots={submittedSlots}/>
         </div>
     );
 }
