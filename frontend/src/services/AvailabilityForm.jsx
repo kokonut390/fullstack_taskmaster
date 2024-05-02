@@ -21,7 +21,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
             setSubmittedSlots(initialSlots)
         }
     }, [initialSlots]);
-    
+
     useEffect(() => {
         const savedOverlaps = JSON.parse(localStorage.getItem('overlaps'));
         if (savedOverlaps) {
