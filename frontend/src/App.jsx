@@ -52,6 +52,15 @@ function App() {
             console.error('Error fetching availability:', error);
         }
     };
+    
+    const calculateOverlaps = (availability) => {
+        let allSlots = [];
+        Object.values(availability).forEach(slots => {
+            allSlots = allSlots.concat(slots);
+        });
+        const newOverlaps = findOverlappingSlots(allSlots);
+        setOverlaps(newOverlaps);
+    }
 
     useEffect(() => {
         fetchSchedules();
