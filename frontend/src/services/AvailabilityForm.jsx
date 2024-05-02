@@ -22,6 +22,20 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         }
     }, [initialSlots]);
 
+    useEffect(() => {
+        fetchAvailability().then((data) => {
+            if (data) {
+                // 假设 data 是处理后的数据
+                const groupedData = groupByPersonName(data);
+                const newOverlaps = findOverlappingSlots(groupedData);
+                setOverlaps(newOverlaps);
+                setSubmittedSlots(groupedData);
+            }
+        }).catch(error => {
+            console.error('Failed to fetch or process availability:', error);
+        });
+    }, [fetchAvailability]);
+
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
         setSlots(prevSlots => [...prevSlots, newSlot])
