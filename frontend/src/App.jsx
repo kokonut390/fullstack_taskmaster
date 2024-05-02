@@ -9,7 +9,6 @@ import './index.css';
 
 function App() {
     const [overlaps, setOverlaps] = useState([])
-    const [overlappingSlots, setOverlappingSlots] = useState([])
     const [availability, setAvailability] = useState([]);
     const [submittedSlots, setSubmittedSlots] = useState([]);
     const [schedules, setSchedules] = useState([]);
@@ -51,8 +50,7 @@ function App() {
             const groupedData = groupByPersonName(response.data)
             setAvailability(groupedData);
 
-            const overlaps = findOverlappingSlots(groupedData)
-            setOverlaps(overlaps)
+            setOverlaps(findOverlappingSlots(groupedData))
         } catch (error) {
             console.error('Error fetching availability:', error);
         }
