@@ -65,10 +65,10 @@ function App() {
             <AvailabilityForm initialSlots={submittedSlots} fetchAvailability={fetchAvailability}/>
             <div>
                 <h2>Available Time Slots</h2>
-                {availability.map((avail, index) => (
+                {Object.entries(availability).map(([name, slots], index) => (
                     <div key={index}>
-                        <h3>{avail.name}</h3>
-                        {avail.availableSlots.map((slot, idx) => (
+                        <h3>{name}</h3>
+                        {slots.map((slot, idx) => (
                             <div key={idx}>
                                 {slot.day} - From {slot.startTime} to {slot.endTime}
                             </div>
