@@ -46,16 +46,16 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
                     availableSlots: slots
                 });
                 console.log('Availability added/updated:', response.data);
-                setSubmittedSlots(prevSlots => [...prevSlots, ...slots]); // 更新提交的时间段
-                setOverlaps(findOverlappingSlots([...submittedSlots, ...slots])); // 更新重叠时间段
-                setSlots([]); // 清空当前输入的时间段
-                fetchAvailability(); // 重新获取所有时间段数据
+                setSubmittedSlots(prevSlots => [...prevSlots, ...slots]);
+                setOverlaps(findOverlappingSlots([...submittedSlots, ...slots]));
+                setSlots([]);
+                fetchAvailability();
             } catch (err) {
                 console.error('Error updating availability:', err);
-                alert('Failed to submit availability slots.'); // 错误时显示警告
+                alert('Failed to submit availability slots.');
             }
         } else {
-            alert('Submission canceled.'); // 用户取消提交时的反馈
+            alert('Submission canceled.');
         }
     };
 
