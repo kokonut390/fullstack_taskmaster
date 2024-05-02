@@ -117,7 +117,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
                 ))}
             </div>
             <button type="submit" onClick={handleSubmit}>Submit All Time Slots</button>
-            
         </>
     )
 }
