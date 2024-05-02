@@ -35,20 +35,20 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         setSlots(prevSlots => prevSlots.filter((_, idx) => idx !== index))
     }
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async (event) =>{
+        event.preventDefault()
         try {
             const response = await axios.post(baseUrl, {
                 name,
                 availableSlots: slots
-            });
-            console.log('Availability added/updated:', response.data);
-            setSubmittedSlots(prevSlots => [...prevSlots, ...slots]);
-            setSlots([]);
-
-            fetchAvailability();
-        } catch (err) {
-            console.error('Error updating availability:', err);
+            })
+            console.log('Availability added/updated:', response.data)
+            setSubmittedSlots(prevSlots => [...prevSlots, ...slots])
+            setOverlaps(findOverlappingSlots([...submittedSlots, ...slots]))
+            setSlots([])
+            fetchAvailability()
+        }catch (err){
+            console.error('Error updating availability:', err)
         }
     }
 
