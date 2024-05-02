@@ -46,7 +46,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
             setSubmittedSlots(prevSlots => [...prevSlots, ...slots])
             setOverlaps(findOverlappingSlots([...submittedSlots, ...slots]))
             setSlots([])
-            fetchAvailability
+            fetchAvailability()
         }catch (err){
             console.error('Error updating availability:', err)
         }
