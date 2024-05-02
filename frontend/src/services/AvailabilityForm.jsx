@@ -96,7 +96,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     }
 
     const handleNameChange = (event) => {
-        
+        const 
     }
 
     return(
