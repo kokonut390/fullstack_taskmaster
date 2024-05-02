@@ -62,7 +62,7 @@ function App() {
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
             <AvailabilityForm initialSlots={submittedSlots}/>
-            <AvailabilityForm availability={availability} on
+            <AvailabilityForm availability={availability} onA
         </div>
     );
 }
