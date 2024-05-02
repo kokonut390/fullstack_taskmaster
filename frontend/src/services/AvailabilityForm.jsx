@@ -44,7 +44,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         event.preventDefault();
 
         if (slots.length === 0 ){
-            
+            alert()
         }
 
         const confirmSubmission = confirm("Once submitted, slots cannot be modified. Do you want to continue?");
