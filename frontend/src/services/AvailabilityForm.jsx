@@ -4,7 +4,7 @@ const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 
 
-function AvailabilityForm ({initialSlots = []}){
+function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     const [submittedSlots, setSubmittedSlots] = useState(initialSlots)
     const [overlaps, setOverlaps] = useState([])
 
