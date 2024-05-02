@@ -35,6 +35,17 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         });
     }, [fetchAvailability]);
 
+    function groupByPersonName(data) {
+        let grouped = {};
+        data.forEach(item => {
+            if (!grouped[item.name]) {
+                grouped[item.name] = [];
+            }
+            grouped[item.name].push(...item.availableSlots);
+        });
+        return grouped;
+    }
+    
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
         setSlots(prevSlots => [...prevSlots, newSlot])
