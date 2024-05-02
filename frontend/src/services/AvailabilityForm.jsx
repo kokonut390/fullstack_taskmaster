@@ -95,6 +95,8 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         return overlaps
     }
 
+    const 
+
     return(
         <>
             <h2>Set Availability</h2>
