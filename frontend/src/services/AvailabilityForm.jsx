@@ -25,7 +25,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     useEffect(() => {
         fetchAvailability().then((data) => {
             if (data) {
-                // 假设 data 是处理后的数据
                 const groupedData = groupByPersonName(data);
                 const newOverlaps = findOverlappingSlots(groupedData);
                 setOverlaps(newOverlaps);
