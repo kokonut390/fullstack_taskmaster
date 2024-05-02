@@ -51,6 +51,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
             console.error('Error updating availability:', err)
         }
     }
+    const 
 
     const findOverlappingSlots = (slots) => {
         let overlaps = []
