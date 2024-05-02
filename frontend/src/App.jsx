@@ -48,8 +48,9 @@ function App() {
             if (response.status === 200 ){
                 fetchAvailability()
             }
-        }catch (err)
+        }catch (err) {
             console.error('Error adding new slot:', err)
+        }
     }
 
     return (
