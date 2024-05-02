@@ -24,10 +24,17 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
 
     useEffect(() => {
         fetchAvailability().then((availabilityData) => {
-            setSubmittedSlots(availabilityData);
-            const newOverlaps = findOverlappingSlots(availabilityData);
-            setOverlaps(newOverlaps);
-        })
+            if (availabilityData) {
+                setSubmittedSlots(availabilityData); // 假设这里 availabilityData 是有效的
+                const newOverlaps = findOverlappingSlots(availabilityData);
+                setOverlaps(newOverlaps);
+            } else {
+                console.error('Received invalid availability data:', availabilityData);
+                setSubmittedSlots([]);
+            }
+        }).catch(error => {
+            console.error('Failed to fetch availability:', error);
+        });
     }, []);
 
     const addSlot = () => {
