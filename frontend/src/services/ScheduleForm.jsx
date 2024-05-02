@@ -11,6 +11,7 @@ function ScheduleForm(props) {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        const confirmDelete
         try {
             const response = await axios.post(baseUrl, { name, date });
             console.log('Schedule added/updated:', response.data);
