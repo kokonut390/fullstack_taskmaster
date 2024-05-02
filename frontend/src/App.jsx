@@ -28,10 +28,6 @@ function App() {
         }
     };
 
-    const groupByPersonName(data){
-        
-    }
-
     const fetchAvailability = async () => {
         try {
             const response = await axios.get(`${baseUrl}/availability`);
