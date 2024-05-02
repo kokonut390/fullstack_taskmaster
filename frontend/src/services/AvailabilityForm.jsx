@@ -44,7 +44,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         event.preventDefault();
 
         if (slots.length === 0 ){
-            alert()
+            alert('No time slots to submit. Please add some time slots before submitting.')
         }
 
         const confirmSubmission = confirm("Once submitted, slots cannot be modified. Do you want to continue?");
