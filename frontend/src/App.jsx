@@ -61,7 +61,9 @@ function App() {
         fetchAvailability();
     }, []);
 
-    const findOverlappingSlots = ()
+    const findOverlappingSlots = (availabilityData) => {
+        
+    }
 
     return (
         <div>
