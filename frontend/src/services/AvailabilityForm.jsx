@@ -52,6 +52,15 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         }
     }
 
+    const calculateOverlaps = (availability) => {
+        let allSlots = [];
+        Object.values(availability).forEach(slots => {
+            allSlots = allSlots.concat(slots);
+        });
+        const newOverlaps = findOverlappingSlots(allSlots);
+        setOverlaps(newOverlaps);
+    }
+
     const findOverlappingSlots = (slots) => {
         let overlaps = []
         for (let i = 0; i < slots.length; i++ ){
