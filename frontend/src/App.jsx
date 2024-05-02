@@ -21,6 +21,7 @@ function App() {
     const fetchSchedules = async () => {
         try {
             const response = await axios.get(`${baseUrl}/schedule`);
+            const groupBy
             setSchedules(response.data);
         } catch (error) {
             console.error('Error fetching data: ', error);
