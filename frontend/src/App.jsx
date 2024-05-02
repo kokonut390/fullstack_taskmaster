@@ -28,6 +28,8 @@ function App() {
         }
     };
 
+    function 
+
     const fetchAvailability = async () => {
         try {
             const response = await axios.get(`${baseUrl}/availability`);
