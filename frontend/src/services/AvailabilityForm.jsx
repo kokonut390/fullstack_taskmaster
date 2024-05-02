@@ -21,6 +21,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
             setSubmittedSlots(initialSlots)
         }
     }, [initialSlots]);
+    
 
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
