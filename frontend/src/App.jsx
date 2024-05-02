@@ -62,19 +62,7 @@ function App() {
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
             <AvailabilityForm initialSlots={submittedSlots}/>
-            <div>
-                <h2>Available Time Slots</h2>
-                {availability.map((avail, index) => (
-                    <div key={index}>
-                        <h3>{avail.name}</h3>
-                        {avail.availableSlots.map((slot, idx) => (
-                            <div key={idx}>
-                                {slot.day} - From {slot.startTime} to {slot.endTime}
-                            </div>
-                        ))}
-                    </div>
-                ))}
-            </div>
+            
         </div>
     );
 }
