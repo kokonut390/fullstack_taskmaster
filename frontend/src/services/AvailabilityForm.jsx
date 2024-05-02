@@ -22,6 +22,12 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         }
     }, [initialSlots]);
     
+    useEffect(() => {
+        const savedOverlaps = JSON.parse(localStorage.getItem('overlaps'));
+        if (savedOverlaps) {
+            setOverlaps(savedOverlaps);
+        }
+    }, [])
 
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
