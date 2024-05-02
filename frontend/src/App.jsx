@@ -33,7 +33,7 @@ function App() {
             if (acc[item.name]) {
                 acc[item.name] = [...acc[item.name], ...item.availableSlots];
             } else {
-                acc[item.name] = item.availableSlots;
+                acc[item.name] = [...item.availableSlots];
             }
             return acc;
         }, {});
