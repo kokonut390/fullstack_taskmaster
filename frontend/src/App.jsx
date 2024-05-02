@@ -30,6 +30,7 @@ function App() {
 
     function groupByPersonName(data) {
         return data.reduce((acc, item) => {
+            const name = item.name || "Unnamed"
             if (Array.isArray(item.availableSlots)) {
                 if (acc[item.name]) {
                     acc[item.name] = [...acc[item.name], ...item.availableSlots];
