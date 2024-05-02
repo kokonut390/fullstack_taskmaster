@@ -8,6 +8,7 @@ import axios from "axios";
 import './index.css';
 
 function App() {
+    const [overlaps, setOverlaps] = useState([])
     const [availability, setAvailability] = useState([]);
     const [submittedSlots, setSubmittedSlots] = useState([]);
     const [schedules, setSchedules] = useState([]);
