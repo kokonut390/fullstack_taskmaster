@@ -42,17 +42,6 @@ function App() {
         fetchAvailability();
     }, []);
 
-    const handleAddSlot = async (newSlot) => {
-        try {
-            const response = await axios.post(`${baseUrl}/availability`, { availableSlot: newSlot })
-            if (response.status === 200 ){
-                fetchAvailability()
-            }
-        }catch (err) {
-            console.error('Error adding new slot:', err)
-        }
-    }
-
     return (
         <div>
             <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10px'}}>
@@ -61,7 +50,20 @@ function App() {
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
-            <AvailabilityForm availability={availability} onAddSlot={handleAddSlot} />
+            <AvailabilityForm initialSlots={submittedSlots}/>
+            <div>
+                <h2>Available Time Slots</h2>
+                {availability.map((avail, index) => (
+                    <div key={index}>
+                        <h3>{avail.name}</h3>
+                        {avail.availableSlots.map((slot, idx) => (
+                            <div key={idx}>
+                                {slot.day} - From {slot.startTime} to {slot.endTime}
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
