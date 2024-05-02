@@ -32,13 +32,13 @@ function App() {
         return data.reduce((acc, item) => {
             const name = item.name || "Unnamed"
             if (Array.isArray(item.availableSlots)) {
-                if (acc[item.name]) {
-                    acc[item.name] = [...acc[item.name], ...item.availableSlots];
+                if (acc[name]) {
+                    acc[name] = [...acc[name], ...item.availableSlots.map(slot => ({ ...slot, name }))];
                 } else {
-                    acc[item.name] = [...item.availableSlots];
+                    acc[name] = item.availableSlots.map(slot => ({ ...slot, name }));
                 }
             } else {
-                acc[item.name] = acc[item.name] || [];
+                acc[name] = acc[name] || [];
             }
             return acc;
         }, {});
