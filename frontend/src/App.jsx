@@ -56,7 +56,7 @@ function App() {
     useEffect(() => {
         fetchSchedules();
         fetchAvailability().then(() => {
-            
+            calculateOverlaps(availability)
         })
     }, []);
 
