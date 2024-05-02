@@ -95,7 +95,9 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         return overlaps
     }
 
-    const handleNameChange =
+    const handleNameChange = (event) => {
+        
+    }
 
     return(
         <>
