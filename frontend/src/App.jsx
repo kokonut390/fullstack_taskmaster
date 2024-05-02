@@ -28,12 +28,16 @@ function App() {
         }
     };
 
-    function groupByPersonName (data){
+    function groupByPersonName(data) {
         return data.reduce((acc, item) => {
-            if (acc[item.name]) {
-                acc[item.name] = [...acc[item.name], ...item.availableSlots];
+            if (Array.isArray(item.availableSlots)) {
+                if (acc[item.name]) {
+                    acc[item.name] = [...acc[item.name], ...item.availableSlots];
+                } else {
+                    acc[item.name] = [...item.availableSlots];
+                }
             } else {
-                acc[item.name] = [...item.availableSlots];
+                acc[item.name] = acc[item.name] || [];
             }
             return acc;
         }, {});
