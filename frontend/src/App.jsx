@@ -22,7 +22,7 @@ function App() {
         try {
             const response = await axios.get(`${baseUrl}/schedule`);
             const groupedData = groupByPersonName(response.data)
-            setSchedules(response.data);
+            setSchedules(groupedData);
         } catch (error) {
             console.error('Error fetching data: ', error);
         }
