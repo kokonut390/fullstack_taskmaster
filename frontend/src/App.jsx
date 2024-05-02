@@ -44,7 +44,7 @@ function App() {
 
     const handleAddSlot = async (newSlot) => {
         try {
-            
+            const response = await axios.post(`${baseUrl}/availability`, { availableSlot: newSlot })
         }
     }
 
