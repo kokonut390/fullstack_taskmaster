@@ -69,31 +69,35 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         setOverlaps(newOverlaps);
     }
 
-    const findOverlappingSlots = (slots) => {
-        let overlaps = []
-        for (let i = 0; i < slots.length; i++ ){
-            for (let j = i + 1; j < slots.length; j++){
-                if(slots[i].day === slots[j].day){ //make sure it's the same day
-                    const start1 = new Date(`01/01/2020 ${slots[i].startTime}`)
-                    const end1 = new Date(`01/01/2020 ${slots[i].endTime}`)
-                    const start2 = new Date(`01/01/2020 ${slots[j].startTime}`)
-                    const end2 = new Date(`01/01/2020 ${slots[j].endTime}`)
+    const findOverlappingSlots = (availability) => {
+        let allSlots = [];
+        Object.values(availability).forEach(slots => {
+            allSlots = allSlots.concat(slots);
+        });
+        let overlaps = [];
+        for (let i = 0; i < allSlots.length; i++) {
+            for (let j = i + 1; j < allSlots.length; j++) {
+                if (allSlots[i].day === allSlots[j].day) { //确保相同天
+                    const start1 = new Date(`01/01/2020 ${allSlots[i].startTime}`);
+                    const end1 = new Date(`01/01/2020 ${allSlots[i].endTime}`);
+                    const start2 = new Date(`01/01/2020 ${allSlots[j].startTime}`);
+                    const end2 = new Date(`01/01/2020 ${allSlots[j].endTime}`);
 
-                    if (start1 < end2 && start2 < end1 ){
-                        const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString()
-                        const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString()
+                    if (start1 < end2 && start2 < end1) {
+                        const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString();
+                        const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString();
                         overlaps.push({
-                            names: [slots[i].name, slots[j].name],
-                            day: slots[i].day,
+                            names: [allSlots[i].name, allSlots[j].name],
+                            day: allSlots[i].day,
                             startTime: overlapStart,
                             endTime: overlapEnd
-                        })
+                        });
                     }
                 }
             }
         }
-        return overlaps
-    }
+        return overlaps;
+    };
 
     return(
         <>
