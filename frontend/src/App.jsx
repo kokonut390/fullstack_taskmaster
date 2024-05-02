@@ -28,7 +28,9 @@ function App() {
         }
     };
 
-    const groupByPersonName(data) = 
+    const groupByPersonName(data){
+        
+    }
 
     const fetchAvailability = async () => {
         try {
