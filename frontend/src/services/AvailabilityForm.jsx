@@ -114,7 +114,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
                     <input
                         type="text"
                         value={name}
-                        onChange={e => setName(e.target.value)}
+                        onChange={handleNameChange}
                         placeholder="Enter your name"
                     />
                 </label>
