@@ -49,7 +49,7 @@ function App() {
                 fetchAvailability()
             }
         }catch (err)
-            
+            console.error()
     }
 
     return (
