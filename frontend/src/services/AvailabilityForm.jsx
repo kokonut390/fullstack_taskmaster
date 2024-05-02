@@ -4,7 +4,8 @@ const baseUrl = `https://final-liangyu.onrender.com/availability`
 
 
 
-function AvailabilityForm ({availability, onAddSlot}){
+function AvailabilityForm ({initialSlots = []}){
+    const [submittedSlots, setSubmittedSlots] = useState(initialSlots)
     const [overlaps, setOverlaps] = useState([])
 
     const [name, setName] = useState('')
@@ -16,7 +17,7 @@ function AvailabilityForm ({availability, onAddSlot}){
 
     useEffect(() => {
         if (initialSlots.length > 0) {
-            console.log("Initializing with:", initialSlots)
+            
             setSubmittedSlots(initialSlots)
         }
     }, [initialSlots]);
