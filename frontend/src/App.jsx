@@ -49,7 +49,7 @@ function App() {
                 fetchAvailability()
             }
         }catch (err)
-            console.error()
+            console.error('Error adding new slot:', err)
     }
 
     return (
