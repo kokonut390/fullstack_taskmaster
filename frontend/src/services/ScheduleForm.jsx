@@ -36,7 +36,7 @@ function ScheduleForm(props) {
                 type="text"
                 value={name}
                 onChange={e => setName(e.target.value)}
-                placeholder="Name"
+                placeholder="Schedule Name"
             />
             <input
                 type="date"
