@@ -38,7 +38,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (name.trim()){
+        if (!name.trim()){
             alert('Name cannot be empty. Please enter a name.')
             return
         }
