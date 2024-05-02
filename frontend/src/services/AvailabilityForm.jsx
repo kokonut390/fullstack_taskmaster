@@ -75,6 +75,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
                 }
             }
         }
+        
         return overlaps
     }
 
