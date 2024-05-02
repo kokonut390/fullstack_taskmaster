@@ -38,11 +38,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (!name.trim()){
-            alert('Name cannot be empty. Please enter a name.')
-            return
-        }
-
         const confirmSubmission = confirm("Once submitted, slots cannot be modified. Do you want to continue?");
         if (confirmSubmission) {
             try {
