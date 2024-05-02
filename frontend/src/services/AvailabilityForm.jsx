@@ -23,6 +23,11 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     }, [initialSlots]);
 
     const addSlot = () => {
+        if (!name.trim()){
+            alert('Name cannot be empty. Please enter a name.')
+            return
+        }
+
         const newSlot = {name, day, startTime, endTime}
         setSlots(prevSlots => [...prevSlots, newSlot])
         setDay('')
