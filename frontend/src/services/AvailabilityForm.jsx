@@ -35,23 +35,29 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         setSlots(prevSlots => prevSlots.filter((_, idx) => idx !== index))
     }
 
-    const handleSubmit = async (event) =>{
-        event.preventDefault()
-        const confirmSubmission = confirm("Once submitted, slots cannot be modified. Do you want to continue?")
-        try {
-            const response = await axios.post(baseUrl, {
-                name,
-                availableSlots: slots
-            })
-            console.log('Availability added/updated:', response.data)
-            setSubmittedSlots(prevSlots => [...prevSlots, ...slots])
-            setOverlaps(findOverlappingSlots([...submittedSlots, ...slots]))
-            setSlots([])
-            fetchAvailability()
-        }catch (err){
-            console.error('Error updating availability:', err)
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const confirmSubmission = confirm("Once submitted, slots cannot be modified. Do you want to continue?");
+        if (confirmSubmission) {
+            try {
+                const response = await axios.post(baseUrl, {
+                    name,
+                    availableSlots: slots
+                });
+                console.log('Availability added/updated:', response.data);
+                setSubmittedSlots(prevSlots => [...prevSlots, ...slots]); // 更新提交的时间段
+                setOverlaps(findOverlappingSlots([...submittedSlots, ...slots])); // 更新重叠时间段
+                setSlots([]); // 清空当前输入的时间段
+                fetchAvailability(); // 重新获取所有时间段数据
+            } catch (err) {
+                console.error('Error updating availability:', err);
+                alert('Failed to submit availability slots.'); // 错误时显示警告
+            }
+        } else {
+            alert('Submission canceled.'); // 用户取消提交时的反馈
         }
-    }
+    };
 
     const findOverlappingSlots = (slots) => {
         let overlaps = []
