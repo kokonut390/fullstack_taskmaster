@@ -75,7 +75,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
                 }
             }
         }
-        
+        localStorage.setItem('overlaps', JSON.stringify(overlaps))
         return overlaps
     }
 
