@@ -46,7 +46,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
             setSubmittedSlots(prevSlots => [...prevSlots, ...slots]);
             setSlots([]);
 
-            // 在提交後重新計算重疊時間段並觸發 fetchAvailability 函數
             fetchAvailability();
         } catch (err) {
             console.error('Error updating availability:', err);
