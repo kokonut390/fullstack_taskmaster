@@ -47,7 +47,7 @@ function App() {
             const response = await axios.get(`${baseUrl}/availability`);
             console.log(response.data)
             const groupedData = groupByPersonName(response.data)
-            setAvailability(response.data);
+            setAvailability(groupedData);
         } catch (error) {
             console.error('Error fetching availability:', error);
         }
