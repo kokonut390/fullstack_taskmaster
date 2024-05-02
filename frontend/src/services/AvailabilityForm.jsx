@@ -24,17 +24,10 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
 
     useEffect(() => {
         fetchAvailability().then((availabilityData) => {
-            if (availabilityData) {
-                setSubmittedSlots(availabilityData);
-                const newOverlaps = findOverlappingSlots(availabilityData);
-                setOverlaps(newOverlaps);
-            } else {
-                console.error('Received invalid availability data:', availabilityData);
-                setSubmittedSlots([]);
-            }
-        }).catch(error => {
-            console.error('Failed to fetch availability:', error);
-        });
+            setSubmittedSlots(availabilityData);
+            const newOverlaps = findOverlappingSlots(availabilityData);
+            setOverlaps(newOverlaps);
+        })
     }, []);
 
     const addSlot = () => {
@@ -78,36 +71,32 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
 
     const findOverlappingSlots = (availability) => {
         let allSlots = [];
-        if (availability && typeof availability === 'object') {
-            Object.values(availability).forEach(slots => {
-                allSlots = allSlots.concat(slots);
-            });
-            let overlaps = [];
-            for (let i = 0; i < allSlots.length; i++) {
-                for (let j = i + 1; j < allSlots.length; j++) {
-                    if (allSlots[i].day === allSlots[j].day) {
-                        const start1 = new Date(`01/01/2020 ${allSlots[i].startTime}`);
-                        const end1 = new Date(`01/01/2020 ${allSlots[i].endTime}`);
-                        const start2 = new Date(`01/01/2020 ${allSlots[j].startTime}`);
-                        const end2 = new Date(`01/01/2020 ${allSlots[j].endTime}`);
-                        if (start1 < end2 && start2 < end1) {
-                            const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString();
-                            const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString();
-                            overlaps.push({
-                                names: [allSlots[i].name, allSlots[j].name],
-                                day: allSlots[i].day,
-                                startTime: overlapStart,
-                                endTime: overlapEnd
-                            });
-                        }
+        Object.values(availability).forEach(slots => {
+            allSlots = allSlots.concat(slots);
+        });
+        let overlaps = [];
+        for (let i = 0; i < allSlots.length; i++) {
+            for (let j = i + 1; j < allSlots.length; j++) {
+                if (allSlots[i].day === allSlots[j].day) { //确保相同天
+                    const start1 = new Date(`01/01/2020 ${allSlots[i].startTime}`);
+                    const end1 = new Date(`01/01/2020 ${allSlots[i].endTime}`);
+                    const start2 = new Date(`01/01/2020 ${allSlots[j].startTime}`);
+                    const end2 = new Date(`01/01/2020 ${allSlots[j].endTime}`);
+
+                    if (start1 < end2 && start2 < end1) {
+                        const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString();
+                        const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString();
+                        overlaps.push({
+                            names: [allSlots[i].name, allSlots[j].name],
+                            day: allSlots[i].day,
+                            startTime: overlapStart,
+                            endTime: overlapEnd
+                        });
                     }
                 }
             }
-            return overlaps;
-        } else {
-            console.error('Invalid availability data for overlapping calculation:', availability);
-            return [];
         }
+        return overlaps;
     };
 
     return(
