@@ -25,7 +25,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     useEffect(() => {
         fetchAvailability().then((availabilityData) => {
             if (availabilityData) {
-                setSubmittedSlots(availabilityData); // 假设这里 availabilityData 是有效的
+                setSubmittedSlots(availabilityData);
                 const newOverlaps = findOverlappingSlots(availabilityData);
                 setOverlaps(newOverlaps);
             } else {
