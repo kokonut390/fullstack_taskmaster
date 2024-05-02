@@ -22,10 +22,6 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         }
     }, [initialSlots]);
 
-    useEffect(() => {
-        fetchAvailability().then(())
-    }, []);
-
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
         setSlots(prevSlots => [...prevSlots, newSlot])
