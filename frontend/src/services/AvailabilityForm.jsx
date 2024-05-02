@@ -23,7 +23,11 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     }, [initialSlots]);
 
     useEffect(() => {
-        fetchAvailability().then(())
+        fetchAvailability().then((availabilityData) => {
+            setSubmittedSlots(availabilityData);
+            const newOverlaps = findOverlappingSlots(availabilityData);
+            setOverlaps(newOverlaps);
+        })
     }, []);
 
     const addSlot = () => {
