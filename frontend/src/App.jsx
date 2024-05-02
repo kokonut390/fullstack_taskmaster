@@ -61,7 +61,7 @@ function App() {
         fetchAvailability();
     }, []);
 
-    
+    const 
 
     return (
         <div>
