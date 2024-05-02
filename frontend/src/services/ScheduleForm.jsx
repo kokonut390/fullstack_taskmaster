@@ -28,7 +28,6 @@ function ScheduleForm(props) {
             console.error('Error adding/updating schedule:', error);
             setError('Failed to add the schedule')
         }}
-
     };
 
     return (
