@@ -32,3 +32,42 @@ Follow these steps to get the project up and running on your local machine:
 
 ## 1. Clone the Repository
 Start by cloning the repository to your local machine. Open a terminal and run the following command:
+
+```
+git clone https://github.com/comp227/final-liangyu-final.git
+
+cd final-liangyu-final
+```
+## 2. Install Dependencies
+- **Backend**:
+```
+cd backend
+npm i
+```
+- **Frontend**:
+```
+cd frontend
+npm i
+```
+## 3. Set Environment Variables
+- Create a `.env` file in the root of your backend directory.
+
+```
+Example .env content:
+
+DATABASE_URL=mongodb+srv://yourmongodbconnectionstring
+```
+- Adjust the url code in `index.js` in backend after you created `.env`.
+
+## 4. Start the Server
+- **Backend**:
+```
+npm start
+```
+
+- **Frontend**
+```
+npm run dev
+```
+- This will start the frontend development server and should automatically open a browser window to http://localhost:5173/ 
+- The backend server will start on http://localhost:3001.
