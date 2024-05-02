@@ -37,6 +37,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
 
     const handleSubmit = async (event) =>{
         event.preventDefault()
+        const confirmSubmission = confirm("Once submitted, slots cannot be modified. Do you want to continue?")
         try {
             const response = await axios.post(baseUrl, {
                 name,
