@@ -61,6 +61,8 @@ function App() {
         fetchAvailability();
     }, []);
 
+    
+
     return (
         <div>
             <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10px'}}>
