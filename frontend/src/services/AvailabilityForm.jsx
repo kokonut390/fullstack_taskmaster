@@ -23,7 +23,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
     }, [initialSlots]);
 
     useEffect(() => {
-        fetchAvailability().then
+        fetchAvailability().then(())
     }, []);
 
     const addSlot = () => {
