@@ -115,8 +115,7 @@ function AvailabilityForm ({initialSlots = []}){
                     </div>
                 ))}
             </div>
-            <button type="submit" onClick={handleSubmit}>Submit All Time Slots</button>
-            /*
+            <button type="submit" onClick={handleSubmit}>Submit All Time Slots</button>/*
             <div>
                 <h3>Submitted Availability Time Slots:</h3>
                 {submittedSlots.map((slot, index) => (
