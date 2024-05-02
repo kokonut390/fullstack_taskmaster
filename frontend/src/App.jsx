@@ -43,7 +43,9 @@ function App() {
     }, []);
 
     const handleAddSlot = async (newSlot) => {
-        
+        try {
+            
+        }
     }
 
     return (
