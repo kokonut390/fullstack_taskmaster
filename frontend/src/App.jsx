@@ -29,7 +29,14 @@ function App() {
     };
 
     function groupByPersonName (data){
-        
+        return data.reduce((acc, item) => {
+            if (acc[item.name]) {
+                acc[item.name] = acc[item.name].concat(item.availableSlots);
+            } else {
+                acc[item.name] = item.availableSlots;
+            }
+            return acc;
+        }, {});
     }
 
     const fetchAvailability = async () => {
