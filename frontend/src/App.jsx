@@ -50,6 +50,7 @@ function App() {
             <h1>Schedule Manager</h1>
             <ScheduleForm fetchSchedules={fetchSchedules}/>
             <ScheduleList schedules={schedules} fetchSchedules={fetchSchedules}/>
+            <AvailabilityForm initialSlots={submittedSlots}/>
             <div>
                 <h2>Available Time Slots</h2>
                 {availability.map((avail, index) => (
@@ -63,7 +64,6 @@ function App() {
                     </div>
                 ))}
             </div>
-            <AvailabilityForm initialSlots={submittedSlots}/>
         </div>
     );
 }
