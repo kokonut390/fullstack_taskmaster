@@ -22,30 +22,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         }
     }, [initialSlots]);
 
-    useEffect(() => {
-        fetchAvailability().then((data) => {
-            if (data) {
-                const groupedData = groupByPersonName(data);
-                const newOverlaps = findOverlappingSlots(groupedData);
-                setOverlaps(newOverlaps);
-                setSubmittedSlots(groupedData);
-            }
-        }).catch(error => {
-            console.error('Failed to fetch or process availability:', error);
-        });
-    }, [fetchAvailability]);
-
-    function groupByPersonName(data) {
-        let grouped = {};
-        data.forEach(item => {
-            if (!grouped[item.name]) {
-                grouped[item.name] = [];
-            }
-            grouped[item.name].push(...item.availableSlots);
-        });
-        return grouped;
-    }
-
+    
     const addSlot = () => {
         const newSlot = {name, day, startTime, endTime}
         setSlots(prevSlots => [...prevSlots, newSlot])
@@ -76,32 +53,31 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         }
     }
 
-    const findOverlappingSlots = (groupedData) => {
-        let allSlots = [];
-        Object.values(groupedData).forEach(slots => {
-            allSlots = [...allSlots, ...slots];
-        });
-        let overlaps = [];
-        for (let i = 0; i < allSlots.length; i++) {
-            for (let j = i + 1; j < allSlots.length; j++) {
-                if (allSlots[i].day === allSlots[j].day && allSlots[i].name !== allSlots[j].name) {
-                    const start1 = new Date(`01/01/2020 ${allSlots[i].startTime}`);
-                    const end1 = new Date(`01/01/2020 ${allSlots[i].endTime}`);
-                    const start2 = new Date(`01/01/2020 ${allSlots[j].startTime}`);
-                    const end2 = new Date(`01/01/2020 ${allSlots[j].endTime}`);
-                    if (start1 < end2 && start2 < end1) {
+    const findOverlappingSlots = (slots) => {
+        let overlaps = []
+        for (let i = 0; i < slots.length; i++ ){
+            for (let j = i + 1; j < slots.length; j++){
+                if(slots[i].day === slots[j].day){ //make sure it's the same day
+                    const start1 = new Date(`01/01/2020 ${slots[i].startTime}`)
+                    const end1 = new Date(`01/01/2020 ${slots[i].endTime}`)
+                    const start2 = new Date(`01/01/2020 ${slots[j].startTime}`)
+                    const end2 = new Date(`01/01/2020 ${slots[j].endTime}`)
+
+                    if (start1 < end2 && start2 < end1 ){
+                        const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString()
+                        const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString()
                         overlaps.push({
-                            names: [allSlots[i].name, allSlots[j].name],
-                            day: allSlots[i].day,
-                            startTime: new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString(),
-                            endTime: new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString()
-                        });
+                            names: [slots[i].name, slots[j].name],
+                            day: slots[i].day,
+                            startTime: overlapStart,
+                            endTime: overlapEnd
+                        })
                     }
                 }
             }
         }
-        return overlaps;
-    };
+        return overlaps
+    }
 
     return(
         <>
