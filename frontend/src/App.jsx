@@ -28,7 +28,7 @@ function App() {
         }
     };
 
-    function 
+    function gr
 
     const fetchAvailability = async () => {
         try {
