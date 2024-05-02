@@ -90,7 +90,7 @@ function App() {
 
     return (
         <div>
-            <button onClick={toggleDarkMode} style={{position:'fixed', top:'10px', right:'10px'}}>
+            <button onClick={toggleDarkMode} style={{position: 'fixed', top: '10px', right: '10px'}}>
                 {darkMode ? 'Light Mode' : 'Dark Mode'}
             </button>
             <h1>Schedule Manager</h1>
@@ -110,7 +110,14 @@ function App() {
                     </div>
                 ))}
             </div>
-            
+            <div>
+                <h3>Overlapping Time Slots:</h3>
+                {overlaps.map((overlap, index) => (
+                    <div key={index}>
+                        {overlap.names.join(' & ')} - {overlap.day} {overlap.startTime} - {overlap.endTime}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
