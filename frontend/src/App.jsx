@@ -9,6 +9,7 @@ import './index.css';
 
 function App() {
     const [overlaps, setOverlaps] = useState([])
+    const [overlappingSlots, setOverlappingSlots] = useState([])
     const [availability, setAvailability] = useState([]);
     const [submittedSlots, setSubmittedSlots] = useState([]);
     const [schedules, setSchedules] = useState([]);
