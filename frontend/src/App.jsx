@@ -74,7 +74,7 @@ function App() {
                     const end2 = new Date(`01/01/2020 ${allSlots[j].endTime}`);
 
                     if (start1 < end2 && start2 < end1) {
-                        const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString([], {});
+                        const overlapStart = new Date(Math.max(start1.getTime(), start2.getTime())).toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
                         const overlapEnd = new Date(Math.min(end1.getTime(), end2.getTime())).toLocaleTimeString();
                         overlaps.push({
                             names: [allSlots[i].name, allSlots[j].name],
