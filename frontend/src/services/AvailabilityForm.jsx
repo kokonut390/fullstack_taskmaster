@@ -100,7 +100,7 @@ function AvailabilityForm ({initialSlots = [], fetchAvailability}){
         const formattedName = inputName
             .toLowerCase()
             .split(' ')
-            .map(word => )
+            .map(word => word)
     }
 
     return(
