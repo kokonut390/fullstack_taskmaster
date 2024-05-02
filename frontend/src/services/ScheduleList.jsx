@@ -10,14 +10,13 @@ function ScheduleList({ schedules, fetchSchedules}) {
         const confirmDelete =confirm('Are you sure you want to delete?')
 
         if (confirmDelete){
-            
-        }
-        try {
-            const response = await axios.delete(`${baseUrl}/${_id}`)
-            console.log('Schedule deleted:', response.data)
-            fetchSchedules()
-        }catch (error){
-            console.error('Error deleting schedules:', error)
+            try {
+                const response = await axios.delete(`${baseUrl}/${_id}`)
+                console.log('Schedule deleted:', response.data)
+                fetchSchedules()
+            }catch (error){
+                console.error('Error deleting schedules:', error)
+            }
         }
     }
     return (
