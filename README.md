@@ -12,8 +12,8 @@
 4. **Overlapping Time Slot Detection**: The website detects and displays overlapping time slots between different users, which helps in managing schedule conflicts.
 
 ## Functionality Missing
-- **User Authentication**: Currently, there is no user authentication system(user page) (https://github.com/comp227/final-liangyu-final/issues/1)
-- **Styling & UI improvement** (https://github.com/comp227/final-liangyu-final/issues/2)
+- **User Authentication**: Currently, there is no user authentication system(user page) 
+- **Styling & UI improvement** 
 
 ## Technologies/Libraries Used
 - **React**
