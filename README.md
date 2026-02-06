@@ -34,7 +34,7 @@ Follow these steps to get the project up and running on your local machine:
 Start by cloning the repository to your local machine. Open a terminal and run the following command:
 
 ```
-git clone https://github.com/comp227/final-liangyu-final.git
+git clone https://github.com/kokonut390/fullstack_taskmaster.git
 ```
 ```
 cd final-liangyu-final
