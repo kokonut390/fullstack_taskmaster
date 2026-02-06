@@ -37,7 +37,7 @@ Start by cloning the repository to your local machine. Open a terminal and run t
 git clone https://github.com/kokonut390/fullstack_taskmaster.git
 ```
 ```
-cd final-liangyu-final
+cd fullstack_taskmaster
 ```
 ## 2. Install Dependencies
 - **Backend**:
